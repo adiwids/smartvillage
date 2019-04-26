@@ -1,0 +1,11 @@
+/public/user_guide
+/vendor
+/.php-version
+/node_modules
+/.nvmrc
+/.npm*.log
+/public/assets
+/public/fonts
+/app/cache
+!/app/cache/**/.keep
+/.env

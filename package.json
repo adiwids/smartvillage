@@ -1,0 +1,30 @@
+{
+  "name": "smartvillage-assets",
+  "version": "1.0.0",
+  "description": "smartvillage-assets",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "development": "./node_modules/gulp-cli/bin/gulp.js -LLLL --gulpfile Gulpfile.js watch"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "Adi Widyawan",
+  "license": "MIT",
+  "engines": {
+    "node": "6.16.0",
+    "npm": "3.10.10"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "dotenv": "^7.0.0",
+    "gulp": "^4.0.1",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "jquery": "^3.4.0"
+  }
+}
