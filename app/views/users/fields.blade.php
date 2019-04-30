@@ -1,0 +1,31 @@
+<div class="col-lg-8 col-md-8">
+  <div class="row">
+    <div class="form-group col-md-5 col-lg-4">
+      <label for="user_name" class="control-label">Username</label>
+      <input type="text" class="form-control" id="user_name" name="user[name]">
+    </div>
+    <div class="form-group col-md-7 col-lg-8">
+      <label for="user_email" class="control-label">Email</label>
+      <input type="email" class="form-control" id="user_email" name="user[email]" autocomplete="email" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6 col-lg-6">
+      <label for="user_password" class="control-label">Password</label>
+      <input type="password" class="form-control" id="user_password" name="user[password]" autocomplete="password" required>
+    </div>
+    <div class="form-group col-md-6 col-lg-6">
+      <label for="user_password_confirmation" class="control-label">Re-type Password</label>
+      <input type="password" class="form-control" id="user_password_confirmation" name="user[password_confirmation]" autocomplete="password" required>
+    </div>
+  </div>
+</div>
+<div class="col-lg-4 col-md-4">
+  <div class="form-group">
+    <label for="user_roles" class="control-label">Roles</label>
+    <select name="user[roles]" id="user_roles" class="form-control" multiple>
+      <option value="superadmin">Super Admin</option>
+      <option value="staff">Staff</option>
+    </select>
+  </div>
+</div>
