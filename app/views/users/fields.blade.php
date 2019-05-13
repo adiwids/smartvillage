@@ -1,5 +1,24 @@
 <div class="col-lg-8 col-md-8">
   <div class="row">
+    <div class="form-group col-md-10 col-lg-10">
+      <label for="user_resident_name" class="control-label">
+        Resident
+      </label>
+      <div class="input-group">
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-user"></i>
+        </span>
+        <input type="hidden" name="user[resident_id]" id="user_resident_id">
+        <input type="text" class="form-control" name="user[resident_name]" id="user_resident_name">
+        <div class="input-group-btn">
+          <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#user_lookup">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div class="form-group col-md-5 col-lg-4">
       <label for="user_name" class="control-label">Username</label>
       <input type="text" class="form-control" id="user_name" name="user[name]">

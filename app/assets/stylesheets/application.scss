@@ -48,3 +48,14 @@ footer{
     }
   }
 }
+
+.hidden { display: none; }
+
+ul {
+  &.pagination {
+    &.on-foot {
+      padding: 4px 0 0 0;
+      margin: 0;
+    }
+  }
+}

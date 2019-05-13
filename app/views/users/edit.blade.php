@@ -37,6 +37,18 @@
               Edit
             </a>
           </li>
+          <li>
+            <a href="#">
+              <i class="glyphicon glyphicon-user"></i>
+              Resident Data
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="glyphicon glyphicon-list-alt"></i>
+              Permissions
+            </a>
+          </li>
         </ul>
       </div>
     </div>

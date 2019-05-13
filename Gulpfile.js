@@ -58,6 +58,7 @@ const precompile = gulp.parallel(styles, compileScript, copies);
 function startSync(onDoneCallbackFn) {
   sync.init({
     ui: false,
+    port: process.env.SYNC_PORT || 8080,
     proxy: process.env.DOMAIN
   });
   onDoneCallbackFn();

@@ -17,6 +17,15 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->helper('url');
+		$this->load->helper('controller_macro');
+		$this->load->helper('page');
+	}
+
 	public function index()
 	{
 		return view('home/index', []);
