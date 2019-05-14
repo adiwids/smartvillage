@@ -14,15 +14,7 @@
           @include('users.fields')
         </div>
         <div class="panel-footer">
-          <button class="btn btn-primary">
-            <i class="glyphicon glyphicon-floppy-disk"></i>
-            Save
-          </button>
-          <span>or</span>
-          <button class="btn btn-default">
-            <i class="glyphicon glyphicon-close"></i>
-            Cancel
-          </button>
+          @include('shared/form_save_or_cancel_buttons')
         </div>
       </form>
     </div>
@@ -38,7 +30,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/residentials/residents/1/edit">
               <i class="glyphicon glyphicon-user"></i>
               Resident Data
             </a>

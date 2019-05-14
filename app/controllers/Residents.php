@@ -18,4 +18,13 @@ class Residents extends CI_Controller {
   {
     return view('residents/index', []);
   }
+
+  public function edit()
+  {
+    $current_tab = $this->input->get('tab');
+    if(strlen($current_tab) == 0) {
+      $current_tab = 'personal_information';
+    }
+    return view('residents/edit', ['current_tab' => $current_tab]);
+  }
 }

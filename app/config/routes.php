@@ -56,6 +56,7 @@ $route['about'] = 'home/about';
 $route['help'] = 'home/help';
 $route['residentials'] = 'residents/dashboard';
 $route['residentials/residents'] = 'residents/index';
+$route['residentials/residents/(:num)/edit'] = 'residents/edit';
 $route['residentials/families'] = 'families/index';
 $route['users'] = 'users/index';
 $route['users/(:num)/edit'] = 'users/edit';

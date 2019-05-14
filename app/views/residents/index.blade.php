@@ -39,8 +39,8 @@
                       <input type="checkbox" id="check_all_residents" data-toggle="checktablerows" data-target=".row-checkbox">
                     </label>
                   </th>
-                  <th>Number</th>
-                  <th>Full Name</th>
+                  <th style="width: 160px;">Number</th>
+                  <th>Name</th>
                   <th style="width: 60px;"></th>
                 </tr>
               </thead>
@@ -49,10 +49,10 @@
                   <td style="width: 24px;">
                     <input type="checkbox" name="bulk_ids[]" class="row-checkbox" value="1">
                   </td>
-                  <td>32712728791872879</td>
+                  <td>3271272879187287</td>
                   <td>John Doe</td>
                   <td>
-                    @include('shared/row_elipsis_menu', ['resource' => 'users', 'id' => 1])
+                    @include('shared/row_elipsis_menu', ['resource' => 'residents', 'id' => 1])
                   </td>
                 </tr>
               </tbody>
@@ -72,9 +72,11 @@
       </div>
       <div class="tab-pane" id="form">
         <div class="panel panel-default panel-folder">
-          <form action="#">
+          <form action="#" class="form-horizontal">
             <div class="panel-body">
-
+              <div class="col-lg-12 col-md-12">
+                @include('residents/personal_information_fields')
+              </div>
             </div>
             <div class="panel-footer">
               @include('shared/form_save_or_cancel_buttons')
