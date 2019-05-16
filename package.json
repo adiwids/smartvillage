@@ -4,7 +4,8 @@
   "description": "smartvillage-assets",
   "main": "Gulpfile.js",
   "scripts": {
-    "development": "./node_modules/gulp-cli/bin/gulp.js -LLLL --gulpfile Gulpfile.js watch"
+    "development": "./node_modules/gulp-cli/bin/gulp.js -LLLL --gulpfile Gulpfile.js watch",
+    "build": "./node_modules/gulp-cli/bin/gulp.js -LLLL --gulpfile Gulpfile.js build"
   },
   "keywords": [
     ""
@@ -25,6 +26,8 @@
   },
   "dependencies": {
     "bootstrap": "^3.4.1",
-    "jquery": "^3.4.0"
+    "jquery": "^3.4.0",
+    "moment": "^2.24.0",
+    "webcamjs": "^1.0.25"
   }
 }

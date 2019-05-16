@@ -7,7 +7,7 @@ const sync = require('browser-sync').create();
 const dotenv = require('dotenv').config();
 
 function compileScss() {
-  return gulp.src('app/assets/stylesheets/**/*.scss')
+  return gulp.src('app/assets/stylesheets/*.scss')
              .pipe(sass().on('error', sass.logError))
              .pipe(gulp.dest('app/cache/assets'));
 }
@@ -26,6 +26,10 @@ function compileScript() {
   return gulp.src([
                   'node_modules/jquery/dist/jquery.js',
                   'node_modules/bootstrap/dist/js/bootstrap.js',
+                  'node_modules/webcamjs/webcam.js',
+                  'node_modules/moment/moment.js',
+                  'node_modules/moment/locale/*.js',
+                  'app/assets/javascripts/**/*.js',
                   'app/assets/javascripts/application.js'
                 ])
                .pipe(concat('application.js'))
@@ -36,7 +40,8 @@ function compileScript() {
 function copyAssets() {
   return gulp.src([
                 'app/assets/images/*',
-                'node_modules/bootstrap/dist/css/bootstrap.css.map'
+                'node_modules/bootstrap/dist/css/bootstrap.css.map',
+                'node_modules/webcamjs/webcam.swf'
               ])
              .pipe(gulp.dest('public/assets'))
              .pipe(sync.stream());
