@@ -78,7 +78,7 @@ $db['default'] = array(
 	'hostname' => getenv('DBHOSTPORT'),
 	'username' => getenv('DBUSERNAME'),
 	'password' => getenv('DBUSERPASS'),
-	'database' => ENVIRONMENT === 'testing' ? getenv('DBNAME').'_test' : getenv('DBNAME'),
+	'database' => ENVIRONMENT === 'testing' ? 'smartvillagedb_test' : 'smartvillagedb',
 	'dbdriver' => getenv('DBDRIVER') !== FALSE ? getenv('DBDRIVER') : 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
