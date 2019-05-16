@@ -1,0 +1,11 @@
+@import 'variables.scss';
+.photo-booth {
+  width: 100%;
+  .frame {
+    margin: 8px auto;
+    &.pas-photo {
+      width: 144px;
+      height: 144px;
+    }
+  }
+}

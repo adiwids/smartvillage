@@ -11,11 +11,6 @@ window.remoteAnchorOnClickListener = function(evt) {
   var method = $(this).attr('data-method');
   var confirm_message =$(this).attr('data-confirm');
 
-  console.debug(href);
-  console.debug(method);
-
-  return false;
-
   if(!isBlank(confirm_message)) {
     if(confirm(confirm_message)) {
       sendRemote(href, method);
@@ -47,6 +42,7 @@ window.sendRemote = function(href, method) {
 
 $(document).ready(function() {
   console.info("Application ready with jQuery %s loaded", jQuery.fn.jquery);
+  moment.locale($(document).attr('lang'));
   $('[data-toggle="popover"]').each(function() {
     var _el = $(this);
     var html = _el.data('html') !== null || _el.data('html') !== undefined;
