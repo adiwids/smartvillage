@@ -1,3 +1,5 @@
+@extends('residents.edit')
+@section('tab-content')
 <form action="#" class="form-horizontal">
   <div class="panel-body">
     @include('residents/personal_information_fields')
@@ -6,3 +8,4 @@
     @include('shared/form_save_or_cancel_buttons')
   </div>
 </form>
+@endsection

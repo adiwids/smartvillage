@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Families extends CI_Controller {
+class Jobs extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
@@ -11,14 +11,9 @@ class Families extends CI_Controller {
 
   public function index()
   {
-    return view('families/index', []);
-  }
-
-  public function show()
-  {
     $data = [
-      'tab' => 'family'
+      'tab' => 'jobs'
     ];
-    return view('families/show', $data);
+    return view('jobs/index', $data);
   }
 }

@@ -12,12 +12,12 @@
 <div class="row">
   <div class="col-lg-12 col-md-12">
     <ul class="nav nav-tabs">
-      @include("residents/tabs", ['tab' => $current_tab])
+      @include("residents/tabs", ['tab' => $tab])
     </ul>
     <div class="tab-content">
-      <div class="tab-pane active" id="{{ $current_tab }}">
+      <div class="tab-pane active">
         <div class="panel panel-default panel-folder">
-          @include(sprintf("residents/tabs/%s", $current_tab), ['tab' => $current_tab])
+          @yield('tab-content')
         </div>
       </div>
     </div>

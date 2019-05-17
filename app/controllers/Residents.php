@@ -21,10 +21,9 @@ class Residents extends CI_Controller {
 
   public function edit()
   {
-    $current_tab = $this->input->get('tab');
-    if(strlen($current_tab) == 0) {
-      $current_tab = 'personal_information';
-    }
-    return view('residents/edit', ['current_tab' => $current_tab]);
+    $data = [
+      'tab' => 'personal_information'
+    ];
+    return view('residents/personal_information_form', $data);
   }
 }
