@@ -54,13 +54,25 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['about'] = 'home/about';
 $route['help'] = 'home/help';
+
 $route['residentials'] = 'residents/dashboard';
+
 $route['residentials/residents'] = 'residents/index';
 $route['residentials/residents/(:num)/edit'] = 'residents/edit';
+
 $route['residentials/residents/(:num)/photos'] = 'photos/index';
+$route['residentials/residents/(:num)/photos/create'] = 'photos/create';
+
 $route['residentials/residents/(:num)/education'] = 'educations/index';
+
 $route['residentials/residents/(:num)/jobs'] = 'jobs/index';
+
 $route['residentials/residents/(:num)/family'] = 'families/show';
+
+$route['residentials/residents/(:num)/addresses'] = 'addresses/index';
+$route['addresses/(:num)/edit'] = 'addresses/edit';
+
 $route['residentials/families'] = 'families/index';
+
 $route['users'] = 'users/index';
 $route['users/(:num)/edit'] = 'users/edit';

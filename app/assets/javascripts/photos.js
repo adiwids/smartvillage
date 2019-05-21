@@ -6,12 +6,8 @@ $(document).ready(function() {
     height: frame.height()
   };
   Webcam.set({
-    width: dimension.width * 2,
-    height: dimension.height * 2,
-    dest_width: dimension.width * 2,
-    dest_height: dimension.height * 2,
-    crop_width: dimension.width,
-    crop_height: dimension.height,
+    width: dimension.width,
+    height: dimension.height,
     image_format: 'jpeg',
     jpeg_quality: 90
   });

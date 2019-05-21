@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Photos extends CI_Controller {
+class Addresses extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
@@ -12,18 +12,8 @@ class Photos extends CI_Controller {
   public function index()
   {
     $data = [
-      'tab' => 'photos',
-      'current_tab' => 'list'
+      'tab' => 'addresses'
     ];
-    return view('photos/index', $data);
-  }
-
-  public function create()
-  {
-    $data = [
-      'tab' => 'photos',
-      'current_tab' => 'form'
-    ];
-    return view('photos/index', $data);
+    return view('addresses/index', $data);
   }
 }

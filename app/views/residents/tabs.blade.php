@@ -4,6 +4,12 @@
     Personal Information
   </a>
 </li>
+<li role="presentation"{{ $tab == 'addresses' ? ' class=active' : '' }}>
+  <a href="/residentials/residents/1/addresses" role="tab" aria-controls="photos">
+    <i class="glyphicon glyphicon-home"></i>
+    Addresses
+  </a>
+</li>
 <li role="presentation"{{ $tab == 'photos' ? ' class=active' : '' }}>
   <a href="/residentials/residents/1/photos" role="tab" aria-controls="photos">
     <i class="glyphicon glyphicon-camera"></i>

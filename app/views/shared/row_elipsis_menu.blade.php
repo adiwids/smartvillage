@@ -8,13 +8,13 @@
 <div class="popover-content hidden" id="{{ implode('_', [$resource, 'row', $id]) }}">
   <ul class="nav">
     <li>
-      <a href="{{ implode('/', [$resource, $id, 'edit']) }}" class="has-icon">
+      <a href="/{{ implode('/', [$resource, $id, 'edit']) }}" class="has-icon">
         <i class="glyphicon glyphicon-pencil"></i>
         Edit
       </a>
     </li>
     <li>
-      <a href="{{ implode('/', [$resource, $id]) }}" class="has-icon text-danger" data-remote="true"
+      <a href="/{{ implode('/', [$resource, $id]) }}" class="has-icon text-danger" data-remote="true"
                                                                                   data-method="delete"
                                                                                   data-confirm="Are you sure?">
         <i class="glyphicon glyphicon-trash"></i>

@@ -9,21 +9,21 @@
 <li>
   <a href="/residentials/residents/1/edit">3271272879187287</a>
 </li>
-<li class="active">Education</li>
+<li class="active">Addresses</li>
 @endsection
 @section('tab-content')
 <div class="panel-body">
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active">
       <a href="#list" role="tab" aria-controls="list" data-toggle="tab">
-        <i class="glyphicon glyphicon-time"></i>
-        History
+        <i class="glyphicon glyphicon-list"></i>
+        List
       </a>
     </li>
     <li role="presentation">
       <a href="#form" role="tab" aria-controls="form" data-toggle="tab">
         <i class="glyphicon glyphicon-plus"></i>
-        Record
+        Address
       </a>
     </li>
   </ul>
@@ -36,13 +36,13 @@
             <thead>
               <tr>
                 <th>
-                  <label for="check_all_educations">
-                    <input type="checkbox" id="check_all_educations" data-toggle="checktablerows" data-target=".row-checkbox">
+                  <label for="check_all_users">
+                    <input type="checkbox" id="check_all_users" data-toggle="checktablerows" data-target=".row-checkbox">
                   </label>
                 </th>
-                <th>Institution</th>
-                <th>Degree</th>
-                <th>Graduated At</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Origin?</th>
                 <th style="width: 80px;"></th>
               </tr>
             </thead>
@@ -51,11 +51,13 @@
                 <td style="width: 24px;">
                   <input type="checkbox" name="bulk_ids[]" class="row-checkbox" value="1">
                 </td>
-                <td>Education University of Indonesia</td>
-                <td>Bachelor (S1)</td>
-                <td>2013</td>
+                <td>1st Lane Ave, NY, 10245</td>
+                <td>+1(123)4567890</td>
+                <td style="width: 24px;" class="text-center">
+                  <input type="checkbox" checked disabled>
+                </td>
                 <td>
-                  @include('shared/row_elipsis_menu', ['resource' => 'educations', 'id' => 1])
+                  @include('shared/row_elipsis_menu', ['resource' => 'addresses', 'id' => 1])
                 </td>
               </tr>
             </tbody>
