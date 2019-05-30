@@ -7,7 +7,7 @@
   <a href="/residentials/residents">Residents</a>
 </li>
 <li>
-  <a href="/residentials/residents/1/edit">3271272879187287</a>
+  <a href="/residents/1/edit">3271272879187287</a>
 </li>
 <li class="active">Addresses</li>
 @endsection

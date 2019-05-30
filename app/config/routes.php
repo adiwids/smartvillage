@@ -58,18 +58,19 @@ $route['help'] = 'home/help';
 $route['residentials'] = 'residents/dashboard';
 
 $route['residentials/residents'] = 'residents/index';
-$route['residentials/residents/(:num)/edit'] = 'residents/edit';
+$route['residents/(:num)/edit'] = 'residents/edit';
 
-$route['residentials/residents/(:num)/photos'] = 'photos/index';
-$route['residentials/residents/(:num)/photos/create'] = 'photos/create';
+$route['residents/(:num)/photos'] = 'photos/index';
+$route['residents/(:num)/photos/create'] = 'photos/create';
 
-$route['residentials/residents/(:num)/education'] = 'educations/index';
+$route['residents/(:num)/education'] = 'educations/index';
+$route['educations/(:num)/edit'] = 'educations/edit';
 
-$route['residentials/residents/(:num)/jobs'] = 'jobs/index';
+$route['residents/(:num)/jobs'] = 'jobs/index';
 
-$route['residentials/residents/(:num)/family'] = 'families/show';
+$route['residents/(:num)/family'] = 'families/show';
 
-$route['residentials/residents/(:num)/addresses'] = 'addresses/index';
+$route['residents/(:num)/addresses'] = 'addresses/index';
 $route['addresses/(:num)/edit'] = 'addresses/edit';
 
 $route['residentials/families'] = 'families/index';

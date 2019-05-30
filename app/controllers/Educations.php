@@ -16,4 +16,9 @@ class Educations extends CI_Controller {
     ];
     return view('educations/index', $data);
   }
+
+  public function edit()
+  {
+    return view('educations/edit');
+  }
 }

@@ -18,12 +18,12 @@
             <i class="glyphicon glyphicon-home"></i>
           </a>
         </li>
-        <li {{ uri_string() == 'about' ? "class=active" : "" }}>
+        <li {{ is_page(uri_string(), 'about') ? "class=active" : "" }}>
           <a href="/about" class="has-icon">
             <i class="glyphicon glyphicon-info-sign"></i>
           </a>
         </li>
-        <li {{ uri_string() == 'help' ? "class=active" : "" }}>
+        <li {{ is_page(uri_string(), 'help') ? "class=active" : "" }}>
           <a href="/help" class="has-icon">
             <i class="glyphicon glyphicon-question-sign"></i>
           </a>

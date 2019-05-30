@@ -15,13 +15,13 @@
 <div class="panel-body">
   <ul class="nav nav-tabs" role="tablist">
     <li{{ $current_tab == 'list' ? ' class=active' : '' }}>
-      <a href="/residentials/residents/1/photos" role="tab">
+      <a href="/residents/1/photos" role="tab">
         <i class="glyphicon glyphicon-list"></i>
         List
       </a>
     </li>
     <li{{ $current_tab == 'form' ? ' class=active' : '' }}>
-      <a href="/residentials/residents/1/photos/create" role="tab">
+      <a href="/residents/1/photos/create" role="tab">
         <i class="glyphicon glyphicon-plus"></i>
         Photo
       </a>

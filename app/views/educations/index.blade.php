@@ -7,7 +7,7 @@
   <a href="/residentials/residents">Residents</a>
 </li>
 <li>
-  <a href="/residentials/residents/1/edit">3271272879187287</a>
+  <a href="/residents/1/edit">3271272879187287</a>
 </li>
 <li class="active">Education</li>
 @endsection
@@ -52,7 +52,7 @@
                   <input type="checkbox" name="bulk_ids[]" class="row-checkbox" value="1">
                 </td>
                 <td>Education University of Indonesia</td>
-                <td>Bachelor (S1)</td>
+                <td>Strata I (S.Kom)</td>
                 <td>2013</td>
                 <td>
                   @include('shared/row_elipsis_menu', ['resource' => 'educations', 'id' => 1])
@@ -73,7 +73,18 @@
         </div>
       </div>
     </div>
-    <div class="tab-pane" role="tabpanel" id="form"></div>
+    <div class="tab-pane" role="tabpanel" id="form">
+      <div class="panel panel-default panel-folder">
+        <form action="#">
+          <div class="panel-body">
+            @include('educations/fields')
+          </div>
+          <div class="panel-footer">
+            @include('shared/form_save_or_cancel_buttons')
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 @endsection

@@ -30,7 +30,7 @@
             </a>
           </li>
           <li>
-            <a href="/residentials/residents/1/edit">
+            <a href="/residents/1/edit">
               <i class="glyphicon glyphicon-user"></i>
               Resident Data
             </a>

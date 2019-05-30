@@ -52,7 +52,7 @@
                   <td>32712728791872879</td>
                   <td>John Doe</td>
                   <td>
-                    @include('shared/row_elipsis_menu', ['resource' => 'users', 'id' => 1])
+                    @include('shared/row_elipsis_menu', ['resource' => 'families', 'id' => 1])
                   </td>
                 </tr>
               </tbody>
