@@ -52,7 +52,7 @@
       </ul>
     </div>
     <ul class="nav navbar-nav sidebar">
-      <li {{ is_page(uri_string(), 'residentials') ? "class=active" : "" }}>
+      <li {{ is_page(uri_string(), ['residentials', 'residents', 'families']) ? "class=active" : "" }}>
         <a href="/residentials">
           <i class="glyphicon glyphicon-user"></i>
           Residentials

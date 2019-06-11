@@ -2,15 +2,25 @@
 if(!function_exists('is_page')) {
   function is_page($uri_string, $match)
   {
+    $matches = [];
     $segments = explode('/', $uri_string);
     $segments_length = sizeof($segments);
-    switch($segments_length) {
-      case 0;
-        return $uri_string == $match;
-      case 1:
-        return $segments[0] == $match;
-      case 2:
-        return strpos($match, $segments[0]) === 0;
+
+    if(is_array($match)) {
+      $matches = $match;
+    } else if(is_string($match)) {
+      $matches[0] = $match;
+    }
+
+    if($segments_length == 0) {
+      return strcmp($matches[0], $uri_string) == 0;
+    } else {
+      $found = false;
+      foreach($matches as $_match) {
+        $found = is_numeric( array_search($_match, $segments) );
+        if($found) { break; }
+      }
+      return $found;
     }
   }
 }
