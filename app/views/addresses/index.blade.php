@@ -75,7 +75,18 @@
         </div>
       </div>
     </div>
-    <div class="tab-pane" role="tabpanel" id="form"></div>
+    <div class="tab-pane" role="tabpanel" id="form">
+      <div class="panel panel-default panel-folder">
+        <form action="#">
+          <div class="panel-body">
+            @include('addresses/fields')
+          </div>
+          <div class="panel-footer">
+            @include('shared/form_save_or_cancel_buttons')
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 @endsection

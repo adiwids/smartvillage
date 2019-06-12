@@ -1,0 +1,14 @@
+@import 'variables.scss';
+label {
+  small {
+    &.hint {
+      font-style: italic;
+      &:before {
+        content: '(';
+      }
+      &:after {
+        content: ')';
+      }
+    }
+  }
+}
