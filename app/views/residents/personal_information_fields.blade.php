@@ -33,7 +33,12 @@
 <div class="form-group">
   <label for="resident_place_of_birth" class="control-label col-lg-3 col-md-3 col-sm-3">Place & Date of Birth</label>
   <div class="col-lg-5 col-md-5 col-sm-5">
-    <input type="text" name="resident[place_of_birth]" id="resident_place_of_birth" class="form-control">
+    <div class="input-group">
+      <span class="input-group-addon">
+        <i class="glyphicon glyphicon-search"></i>
+      </span>
+      <input type="text" name="resident[place_of_birth]" id="resident_place_of_birth" class="form-control">
+    </div>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-4">
     <div class="input-group">
