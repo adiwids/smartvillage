@@ -17,7 +17,7 @@
 </div>
 <div class="form-group">
   <label for="resident_gender" class="control-label col-lg-3 col-md-3 col-sm-3">Gender</label>
-  <div class="col-lg-9 col-md-9 col-sm-9">
+  <div class="col-lg-3 col-md-3 col-sm-3">
     <div class="radio">
       <label for="resident_gender_male">
         <input type="radio" name="resident[gender]" id="resident_gender_male" checked> Male
@@ -28,6 +28,19 @@
         <input type="radio" name="resident[gender]" id="resident_gender_female"> Female
       </label>
     </div>
+  </div>
+  <label for="resident_blood_type" class="control-label col-lg-2 col-md-2 col-sm-2">Blood Type</label>
+  <div class="col-lg-2 col-md-2 col-sm-2">
+    <select name="resident[blood_type]" id="resident_blood_type" class="form-control">
+      <option value="A+" selected>A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select>
   </div>
 </div>
 <div class="form-group">
@@ -52,29 +65,33 @@
 <div class="form-group">
   <label for="resident_nationality" class="control-label col-lg-3 col-md-3 col-sm-3">Nationality</label>
   <div class="col-lg-3 col-md-3 col-sm-3">
+    <select name="resident[nationality]" id="resident_nationality" class="form-control">
+      <option value="domestic" selected>Domestic</option>
+      <option value="foreign">Foreign</option>
+    </select>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4">
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-flag"></i>
       </span>
-      <select name="resident[nationality]" id="resident_nationality" class="form-control">
-        <option value="domestic" selected>Domestic</option>
-        <option value="foreign">Foreign</option>
-      </select>
+      <input type="text" name="resident[origin_country]" class="form-control" value="">
     </div>
   </div>
-  <label for="resident_religion" class="control-label col-lg-1 col-md-1 col-sm-1">Religion</label>
+</div>
+<div class="form-group">
+  <label for="resident_religion" class="control-label col-lg-3 col-md-3 col-sm-3">Religion</label>
   <div class="col-lg-3 col-md-3 col-sm-3">
     <select name="resident[religion]" id="resident_religion" class="form-control">
       <option value="islam">Islam</option>
-      <option value="christian">Christian</option>
+      <option value="christian">Catholic</option>
+      <option value="christian">Protestant</option>
       <option value="hindu">Hindu</option>
       <option value="buddha">Buddha</option>
       <option value="other">Other...</option>
     </select>
   </div>
-</div>
-<div class="form-group">
-  <label for="resident_marriage_status" class="control-label col-lg-3 col-md-3 col-sm-3">Marriage Status</label>
+  <label for="resident_marriage_status" class="control-label col-lg-2 col-md-2 col-sm-2">Marriage Status</label>
   <div class="col-lg-3 col-md-3 col-sm-3">
     <select name="resident[mariage_status]" id="resident_marriage_status" class="form-control">
       <option value="b" selected>Single</option>
