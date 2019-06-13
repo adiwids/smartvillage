@@ -87,7 +87,7 @@
       </ol>
     </div>
     @yield('content')
-    <div class="row">
+    <div class="row-fluid">
       <div class="col-lg-12 col-md-12">
         <footer>
           <p class="text-muted text-right">
