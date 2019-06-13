@@ -9,3 +9,6 @@
 /app/cache
 !/app/cache/**/.keep
 /.env
+/app/logs/*.log
+/app/tmp
+!/app/tmp/.keep

@@ -5,7 +5,10 @@
   "main": "Gulpfile.js",
   "scripts": {
     "development": "./node_modules/gulp-cli/bin/gulp.js -LLLL --gulpfile Gulpfile.js watch",
-    "build": "./node_modules/gulp-cli/bin/gulp.js -LLLL --gulpfile Gulpfile.js build"
+    "build": "./node_modules/gulp-cli/bin/gulp.js -LLLL --gulpfile Gulpfile.js build",
+    "start-server": "./bin/server start --root=public/ --log=app/logs/access.log --pid=app/tmp/pids/server.pid",
+    "kill-server": "./bin/server stop --pid=app/tmp/pids/server.pid",
+    "dev-server": "NODE_ENV=development npm run start-server"
   },
   "keywords": [
     ""
