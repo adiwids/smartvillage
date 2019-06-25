@@ -69,9 +69,8 @@ case $command in
   start)
     nohup php -t $ROOT -S $DOMAIN > $LOG 2>&1 &
     echo $! > $PID
-    set -ex
     npm run build
-    DOMAIN=$DOMAIN npm run $NODE_ENV
+    npm run $NODE_ENV
     ;;
   stop)
     if [ -e $PID ]
