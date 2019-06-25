@@ -16,4 +16,9 @@ class Jobs extends CI_Controller {
     ];
     return view('jobs/index', $data);
   }
+
+  public function edit()
+  {
+    return view('jobs/edit');
+  }
 }

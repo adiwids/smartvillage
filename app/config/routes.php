@@ -67,6 +67,7 @@ $route['residents/(:num)/education'] = 'educations/index';
 $route['educations/(:num)/edit'] = 'educations/edit';
 
 $route['residents/(:num)/jobs'] = 'jobs/index';
+$route['jobs/(:num)/edit'] = 'jobs/edit';
 
 $route['residents/(:num)/family'] = 'families/show';
 
