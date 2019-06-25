@@ -1,4 +1,13 @@
 <div class="row">
+  <div class="col-lg-6 col-md-6">
+    <div class="checkbox">
+      <label for="address_origin" class="control-label">
+        <input type="checkbox" name="address[origin]" id="address_origin" checked> Origin
+      </label>
+    </div>
+  </div>
+</div>
+<div class="row">
   <div class="col-lg-8 col-md-8">
     <div class="form-group required">
       <label for="address_line1" class="control-label">Line #1</label>

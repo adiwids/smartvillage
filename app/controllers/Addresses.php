@@ -16,4 +16,9 @@ class Addresses extends CI_Controller {
     ];
     return view('addresses/index', $data);
   }
+
+  public function edit()
+  {
+    return view('addresses/edit');
+  }
 }
