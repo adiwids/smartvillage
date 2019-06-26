@@ -1,0 +1,14 @@
+.family-data {
+  &.form-horizontal {
+    padding-left: 23px;
+    margin-right: 23px;
+    label {
+      &.control-label {
+        padding-right: 4px;
+        &:after {
+          content: ':';
+        }
+      }
+    }
+  }
+}
