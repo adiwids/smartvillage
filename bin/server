@@ -69,6 +69,10 @@ case $command in
   start)
     nohup php -t $ROOT -S $DOMAIN > $LOG 2>&1 &
     echo $! > $PID
+    if [ -e $PROJECT_ROOT/.nvmrc ]
+    then
+      nvm use
+    fi
     npm run build
     npm run $NODE_ENV
     ;;
