@@ -12,7 +12,7 @@
 <li class="active">Addresses</li>
 @endsection
 @section('tab-content')
-<div class="panel-body">
+<div class="panel-body frame">
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active">
       <a href="#list" role="tab" aria-controls="list" data-toggle="tab">

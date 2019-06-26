@@ -7,12 +7,12 @@
   <a href="/residentials/residents">Residents</a>
 </li>
 <li>
-  <a href="/residentials/residents/1/edit">3271272879187287</a>
+  <a href="/residents/1/edit">3271272879187287</a>
 </li>
 <li class="active">Jobs</li>
 @endsection
 @section('tab-content')
-<div class="panel-body">
+<div class="panel-body frame">
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active">
       <a href="#list" role="tab" aria-controls="list" data-toggle="tab">

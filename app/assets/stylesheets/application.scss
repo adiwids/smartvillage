@@ -43,8 +43,18 @@ footer{
 .panel {
   &.panel-default {
     &.panel-folder {
+      margin-bottom: 0 !important; // override Bootstrap .panel margin
       border-top: none;
       border-radius: 0;
+      > form:nth-child(1) {
+        padding: 10px;
+      }
+      .panel-body {
+        padding: 4px;
+        &.frame {
+          background-color: $bs-navbar-default-bgcolor;
+        }
+      }
     }
   }
 }
@@ -66,6 +76,16 @@ ul {
       color: $bs-danger-color;
       &:after {
         content: ' *';
+      }
+    }
+  }
+}
+
+.tab-pane {
+  &#list {
+    .panel-body {
+      & > .row:nth-child(1) {
+        margin-top: 8px;
       }
     }
   }

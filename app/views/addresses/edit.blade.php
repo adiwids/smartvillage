@@ -18,14 +18,14 @@
 <div class="row">
   <div class="col-lg-12 col-md-12">
     <div class="panel panel-default">
-      <div class="panel-body">
-        <form action="#">
+      <form action="#">
+        <div class="panel-body">        
           @include('addresses/fields')
-        </form>
-      </div>
-      <div class="panel-footer">
-        @include('shared/form_save_or_cancel_buttons')
-      </div>
+        </div>
+        <div class="panel-footer">
+          @include('shared/form_save_or_cancel_buttons')
+        </div>
+      </form>
     </div>
   </div>
 </div>

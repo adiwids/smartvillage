@@ -105,19 +105,29 @@
   <div class="col-lg-9 col-md-9 col-sm-9">
     <div class="checkbox">
       <label>
-        <input type="checkbox" name="resident[disability][]" value="0"> Blind
+        <input type="checkbox" name="resident[disability][]" value="1"> Physically
       </label>
     </div>
     <div class="checkbox">
       <label>
-        <input type="checkbox" name="resident[disability][]" value="1"> Deaf
+        <input type="checkbox" name="resident[disability][]" value="2"> Blind
       </label>
     </div>
     <div class="checkbox">
-      <label class="col-lg-1 col-md-1 col-sm-1">
-        <input type="checkbox" name="resident[disability][]" value="99"> Other
+      <label>
+        <input type="checkbox" name="resident[disability][]" value="3"> Deaf
       </label>
-      <div class="col-lg-6 col-md-6 col-sm-6">
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="resident[disability][]" value="4"> Mentally
+      </label>
+    </div>
+    <div class="checkbox">
+      <label class="col-lg-12 col-md-12 col-sm-12">
+        <input type="checkbox" name="resident[disability][]" value="5"> Other
+      </label>
+      <div class="form-group col-lg-6">
         <input type="text" name="resident[disability][]" class="form-control">
       </div>
     </div>
