@@ -87,18 +87,6 @@
       </ol>
     </div>
     @yield('content')
-    <div class="row-fluid">
-      <div class="col-lg-12 col-md-12">
-        <footer>
-          <p class="text-muted text-right">
-            Page rendered in <strong>0</strong> seconds.
-            @if($_ENV['CI_ENV'] === 'development')
-            CodeIgniter Version <strong>{{ CI_VERSION }}</strong>
-            @endif
-          </p>
-        </footer>
-      </div>
-    </div>
   </div>
   <script src="{{ asset_path('application.js') }}"></script>
 </body>
