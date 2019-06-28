@@ -41,6 +41,7 @@
                   </th>
                   <th>Number</th>
                   <th>Householder</th>
+                  <th># of Members</th>
                   <th style="width: 60px;"></th>
                 </tr>
               </thead>
@@ -51,6 +52,7 @@
                   </td>
                   <td>32712728791872879</td>
                   <td>John Doe</td>
+                  <td>1</td>
                   <td>
                     @include('shared/row_elipsis_menu', ['resource' => 'families', 'id' => 1])
                   </td>
@@ -74,7 +76,7 @@
         <div class="panel panel-default panel-folder">
           <form action="#">
             <div class="panel-body">
-
+              @include('families/fields')
             </div>
             <div class="panel-footer">
               @include('shared/form_save_or_cancel_buttons')
