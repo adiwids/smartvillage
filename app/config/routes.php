@@ -75,6 +75,7 @@ $route['residents/(:num)/addresses'] = 'addresses/index';
 $route['addresses/(:num)/edit'] = 'addresses/edit';
 
 $route['residentials/families'] = 'families/index';
+$route['families/(:num)/edit'] = 'families/edit';
 
 $route['users'] = 'users/index';
 $route['users/(:num)/edit'] = 'users/edit';

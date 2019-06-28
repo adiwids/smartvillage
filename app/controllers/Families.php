@@ -21,4 +21,9 @@ class Families extends CI_Controller {
     ];
     return view('families/show', $data);
   }
+
+  public function edit()
+  {
+    return view('families/edit');
+  }
 }
