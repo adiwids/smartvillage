@@ -1,8 +1,15 @@
 <div class="row">
-  <div class="col-lg-6 col-md-6">
+  <div class="col-lg-2 col-md-2">
     <div class="checkbox">
       <label for="address_origin" class="control-label">
-        <input type="checkbox" name="address[origin]" id="address_origin" checked> Origin
+        <input type="checkbox" name="address[origin]" id="address_origin"> Origin
+      </label>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-3">
+    <div class="checkbox">
+      <label for="address_current" class="control-label">
+        <input type="checkbox" name="address[current]" id="address_current"> Set as current
       </label>
     </div>
   </div>
