@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Smart Village</title>
-  <link rel="stylesheet" href="{{ asset_path('application.css') }}">
+  <link rel="stylesheet" href="{{ asset_path('app.css') }}">
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -88,6 +88,6 @@
     </div>
     @yield('content')
   </div>
-  <script src="{{ asset_path('application.js') }}"></script>
+  <script src="{{ asset_path('app.js') }}"></script>
 </body>
 </html>

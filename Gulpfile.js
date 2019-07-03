@@ -17,7 +17,7 @@ function buildApplicationStyle() {
                   'app/cache/assets/**/*.css',
                   'node_modules/bootstrap/dist/css/bootstrap.css'
               ])
-             .pipe(concat('application.css'))
+             .pipe(concat('app.css'))
              .pipe(gulp.dest('public/assets'))
              .pipe(sync.stream( { match: '**/*.css' } ));
 }
@@ -30,9 +30,9 @@ function compileScript() {
                   'node_modules/moment/moment.js',
                   'node_modules/moment/locale/*.js',
                   'app/assets/javascripts/**/*.js',
-                  'app/assets/javascripts/application.js'
+                  'app/assets/javascripts/app.js'
                 ])
-               .pipe(concat('application.js'))
+               .pipe(concat('app.js'))
                .pipe(gulp.dest('public/assets'))
                .pipe(sync.stream());
 }

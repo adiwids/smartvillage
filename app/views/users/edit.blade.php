@@ -1,4 +1,4 @@
-@extends('layouts.application')
+@extends('layouts.app')
 @section('breadcrumb')
 <li>
   <a href="/users">Users</a>

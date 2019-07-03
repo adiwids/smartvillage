@@ -1,4 +1,4 @@
-@extends('layouts.application')
+@extends('layouts.app')
 @section('content')
 <div class="row">
 	<h1>Welcome to CodeIgniter! <i class="glyphicon glyphicon-thumbs-up"></i></h1>
