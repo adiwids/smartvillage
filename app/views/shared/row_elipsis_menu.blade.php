@@ -1,4 +1,4 @@
-<a href="#" class="has-icon" data-toggle="popover"
+<a href="javascript:void()" class="has-icon" data-toggle="popover"
                              data-html="true"
                              data-html-content="#{{ implode('_', [$resource, 'row', $id]) }}"
                              data-placement="top"
