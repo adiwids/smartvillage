@@ -57,6 +57,9 @@ footer{
         &.frame {
           background-color: $bs-navbar-default-bgcolor;
         }
+        .table {
+          margin-bottom: 0;
+        }
       }
     }
   }
