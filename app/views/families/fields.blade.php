@@ -13,21 +13,18 @@
       </div>
     </div>
   </div>
-  <div class="form-group col-lg-5 col-lg-offset-1">
+  <div class="form-group col-lg-6">
     <label for="family_householder_id" class="control-label">Householder Name</label>
     <input type="hidden" id="family_householder_id">
     <div class="input-group">
-      <input type="text" class="form-control" name="family[householder_name]" id="family_householder_name">
       <span class="input-group-addon">
-        <i class="glyphicon glyphicon-search"></i>
+        <i class="glyphicon glyphicon-user"></i>
       </span>
+      <input type="text" class="form-control" name="family[householder_name]" id="family_householder_name">
       <div class="input-group-btn">
+        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
         <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i></button>
       </div>
     </div>
   </div>
 </div>
-<fieldset class="row">
-  <legend>Address</legend>
-  @include('addresses/fields')
-</fieldset>
