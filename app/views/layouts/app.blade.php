@@ -12,6 +12,22 @@
       <div class="navbar-header">
         <a href="/" class="navbar-brand">Smart Village</a>
       </div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown{{ is_page(uri_string(), 'settings') ? ' active' : '' }}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-cog"></i>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/settings">
+                <i class="glyphicon glyphicon-pencil"></i>
+                General Settings
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li {{ empty(uri_string()) ? "class=active" : "" }}>
           <a href="/" class="has-icon">
@@ -35,10 +51,7 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="/users/1/edit" class="has-icon">
-                <i class="glyphicon glyphicon-cog"></i>
-                Preference
-              </a>
+              <a href="/users/1/edit" class="has-icon">Edit Profile</a>
             </li>
             <li class="divider" role="separator"></li>
             <li>

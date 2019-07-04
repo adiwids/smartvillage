@@ -30,12 +30,6 @@
             </a>
           </li>
           <li>
-            <a href="/residents/1/edit">
-              <i class="glyphicon glyphicon-user"></i>
-              Resident Data
-            </a>
-          </li>
-          <li>
             <a href="#">
               <i class="glyphicon glyphicon-list-alt"></i>
               Permissions
