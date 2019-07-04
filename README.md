@@ -13,6 +13,9 @@ __Smart Village__ is built to overcome needs in residential matter, including:
 
 ### Development
 
+#### Conventions
+  - `$` indicates in command-prompt, such as: Terminal on Linux, Command Prompt on Wind*ws, etc.
+
 #### Requirements
 
   - HTML5
@@ -26,23 +29,15 @@ __Smart Village__ is built to overcome needs in residential matter, including:
   - *tbd*
 
 #### Guide
-  1. Download and install [XAMPP](https://www.apachefriends.org/download.html) or [PHP Binary & Libs](https://www.php.net/downloads.php)
-  2. *Optional step:*
-
-     Set `php` binary path as environment variables (Wind*ws) or `symlink` it thus we don't need to call with full binary path.
-  3. Download [Composer](https://getcomposer.org/download/) and place `composer.phar` adjacent with `php` binary.
-  4. *Optional step:*
-
-     Set `composer.phar` file path as `COMPOSER` environment variables, thus on Wind*ws we can run composer command by `php "%COMPOSER%" [command]`.
-  5. Download and install [NodeJS](https://nodejs.org/en/download)
-  6. *Optional step:*
-
-     Set `node` and `npm` binary paths as environment variables (Wind*ws) or `symlink` it thus we don't need to call with full binary path.  
-  7. Download or clone this project.
-  8. Copy `.env.example` file to `.env`
-  9. Enter to the project root directory, then run `$ npm install`
-  10. Run `$ composer install`
-  11. Start development server by running `$ npm run dev-server`
+  1. Download and install [XAMPP](https://www.apachefriends.org/download.html) or [PHP Binary & Libs](https://www.php.net/downloads.php).
+  2. Download [Composer](https://getcomposer.org/download/) or [Composer Installer](https://getcomposer.org/Composer-Setup.exe) for Wind*ws user.
+  3. Download and install [NodeJS](https://nodejs.org/en/download)
+  4. Make sure steps 1-3 finished and successfully running by executing `$ php -v`, `composer -V`, `node -v`, and `npm -v`.
+  5. Download or clone this project.
+  6. Copy `.env.example` file to `.env`
+  7. Enter to the project root directory, then run `$ npm install`
+  8. Run `$ composer install`
+  9. Start development server by running `$ npm run dev-server`
 
 ### References
 
