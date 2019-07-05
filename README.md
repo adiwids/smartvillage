@@ -33,11 +33,15 @@ __Smart Village__ is built to overcome needs in residential matter, including:
   2. Download [Composer](https://getcomposer.org/download/) or [Composer Installer](https://getcomposer.org/Composer-Setup.exe) for Wind*ws user.
   3. Download and install [NodeJS](https://nodejs.org/en/download)
   4. Make sure steps 1-3 finished and successfully running by executing `$ php -v`, `composer -V`, `node -v`, and `npm -v`.
-  5. Download or clone this project.
-  6. Copy `.env.example` file to `.env`
-  7. Enter to the project root directory, then run `$ npm install`
-  8. Run `$ composer install`
-  9. Start development server by running `$ npm run dev-server`
+  5. Download and install [Git](https://git-scm.com/downloads). *Using Add Git Bash here from Windows context menu is easier than Command Prompt.*
+  6. Download or clone this project (*use SSH for collaborator or HTTPS for guest*).
+  7. Copy `.env.example` file to `.env`
+  8. Enter to the project root directory, then run `$ npm install`
+  9. Run `$ composer install`
+  10. Start development server by running `$ npm run dev-server` or manually run:
+     1. `$ npm run build`, then
+     2. `php -t public -S localhost:8000`
+  11. Open `http://localhost:8000` on your browser if you start server manually.
 
 ### References
 
