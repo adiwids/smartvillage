@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 	<meta charset="utf-8">
 	<title>Smart Village</title>
@@ -71,6 +71,18 @@
           Residentials
         </a>
       </li>
+      <li {{ is_page(uri_string(), 'archives') ? "class=active" : "" }}>
+        <a href="/archives">
+          <i class="glyphicon glyphicon-folder-open"></i>
+          Archives
+        </a>
+      </li>
+      <li {{ is_page(uri_string(), 'transactions') ? "class=active" : "" }}>
+        <a href="/transactions">
+          <i class="glyphicon glyphicon-piggy-bank"></i>
+          Cash Transactions
+        </a>
+      </li>
       <li class="divider" role="separator"></li>
       <li {{ is_page(uri_string(), 'users') ? "class=active" : "" }}>
         <a href="/users">
@@ -102,5 +114,6 @@
     @yield('content')
   </div>
   <script src="{{ asset_path('app.js') }}"></script>
+  <script src="{{ asset_path('bootstrap-datetimepicker.min.js') }}"></script>
 </body>
 </html>

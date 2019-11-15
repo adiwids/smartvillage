@@ -40,6 +40,11 @@ window.sendRemote = function(href, method) {
   });
 };
 
+window.initDateTimePicker = function(selector, options = {}) {
+  var defaultOptions = { locale: $('html').attr('lang') };
+  $(selector).datetimepicker(Object.assign(defaultOptions, options));
+};
+
 $(document).ready(function() {
   console.info("Application ready with jQuery %s loaded", jQuery.fn.jquery);
   moment.locale($(document).attr('lang'));
@@ -75,4 +80,5 @@ $(document).ready(function() {
   $('a[data-remote="true"]').each(function() {
     $(this).click(remoteAnchorOnClickListener);
   });
+  initDateTimePicker('.birthdate.date-picker', { format: 'L', maxDate: moment() });
 });

@@ -38,10 +38,11 @@ __Smart Village__ is built to overcome needs in residential matter, including:
   7. Copy `.env.example` file to `.env`
   8. Enter to the project root directory, then run `$ npm install`
   9. Run `$ composer install`
-  10. Start development server by running `$ npm run dev-server` or manually run:
+  10. If `app/cache/views` directory doesn't exists, create it first. It has been done automatically if start server via `npm run dev-server` command.
+  11. Start development server by running `$ npm run dev-server` or manually run:
      1. `$ npm run build`, then
      2. `php -t public -S localhost:8000`
-  11. Open `http://localhost:8000` on your browser if you start server manually.
+  12. Open `http://localhost:8000` on your browser if you start server manually.
 
 ### References
 

@@ -67,6 +67,9 @@ fi
 
 case $command in
   start)
+    if [ !-d $PROJECT_ROOT/app/cache/views ]; then
+      mkdir -p $PROJECT_ROOT/app/cache/views
+    fi
     nohup php -t $ROOT -S $DOMAIN > $LOG 2>&1 &
     echo $! > $PID
     if [ -e $PROJECT_ROOT/.nvmrc ]

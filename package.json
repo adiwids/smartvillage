@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.4.1",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "jquery": "^3.4.0",
     "moment": "^2.24.0",
     "webcamjs": "^1.0.25"

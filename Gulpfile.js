@@ -7,7 +7,9 @@ const sync = require('browser-sync').create();
 const dotenv = require('dotenv').config();
 
 function compileScss() {
-  return gulp.src('app/assets/stylesheets/*.scss')
+  return gulp.src([
+                  'app/assets/stylesheets/*.scss'
+              ])
              .pipe(sass().on('error', sass.logError))
              .pipe(gulp.dest('app/cache/assets'));
 }
@@ -15,7 +17,8 @@ function compileScss() {
 function buildApplicationStyle() {
   return gulp.src([
                   'app/cache/assets/**/*.css',
-                  'node_modules/bootstrap/dist/css/bootstrap.css'
+                  'node_modules/bootstrap/dist/css/bootstrap.css',
+                  'node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css'
               ])
              .pipe(concat('app.css'))
              .pipe(gulp.dest('public/assets'))
@@ -41,7 +44,8 @@ function copyAssets() {
   return gulp.src([
                 'app/assets/images/*',
                 'node_modules/bootstrap/dist/css/bootstrap.css.map',
-                'node_modules/webcamjs/webcam.swf'
+                'node_modules/webcamjs/webcam.swf',
+                'node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
               ])
              .pipe(gulp.dest('public/assets'))
              .pipe(sync.stream());

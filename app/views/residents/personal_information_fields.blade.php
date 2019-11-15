@@ -58,7 +58,7 @@
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-calendar"></i>
       </span>
-      <input type="text" name="resident[date_of_birth]" id="resident_date_of_birth" class="form-control">
+      <input type="text" name="resident[date_of_birth]" id="resident_date_of_birth" class="form-control birthdate date-picker">
     </div>
   </div>
 </div>
