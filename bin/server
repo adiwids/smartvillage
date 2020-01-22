@@ -1,7 +1,8 @@
 #!/bin/sh
 
-PROJECT_ROOT=$(dirname $(dirname $(readlink -f "$0")))
-
+cd $(dirname "${0}") > /dev/null
+PROJECT_ROOT="$(dirname $(pwd -L))"
+cd .. > /dev/null
 command=$1
 shift
 
@@ -67,7 +68,7 @@ fi
 
 case $command in
   start)
-    if [ !-d $PROJECT_ROOT/app/cache/views ]; then
+    if [ ! -d $PROJECT_ROOT/app/cache/views ]; then
       mkdir -p $PROJECT_ROOT/app/cache/views
     fi
     nohup php -t $ROOT -S $DOMAIN > $LOG 2>&1 &
