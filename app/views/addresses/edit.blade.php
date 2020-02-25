@@ -1,4 +1,4 @@
-@extends('layouts.application')
+@extends('layouts.app')
 @section('breadcrumb')
 <li>
   <a href="/residentials">Residentials</a>
@@ -19,7 +19,7 @@
   <div class="col-lg-12 col-md-12">
     <div class="panel panel-default">
       <form action="#">
-        <div class="panel-body">        
+        <div class="panel-body">
           @include('addresses/fields')
         </div>
         <div class="panel-footer">

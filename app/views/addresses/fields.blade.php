@@ -14,25 +14,21 @@
     </div>
   </div>
 </div>
+
 <div class="row">
-  <div class="col-lg-8 col-md-8">
+  <div class="col-lg-6 col-md-6">
     <div class="form-group required">
       <label for="address_line1" class="control-label">Line #1</label>
       <input type="text" name="address[line1]" id="address_line1" class="form-control">
     </div>
-    <div class="form-group">
-      <label for="address_line2" class="control-label">Line #2</label>
-      <input type="text" name="address[line2]" id="address_line2" class="form-control">
+  </div>
+  <div class="col-lg-2 col-md-2">
+    <div class="form-group required">
+      <label for="address_number" class="control-label">Number</label>
+      <input type="text" name="address[number]" id="address_number" class="form-control text-right">
     </div>
   </div>
   <div class="col-lg-4 col-md-4">
-    <div class="form-group">
-      <label for="address_ownership" class="control-label">Ownership</label>
-      <select name="address[ownership]" id="address_ownership" class="form-control">
-        <option value="permanent" selected>Permanent</option>
-        <option value="renting">Renting</option>
-      </select>
-    </div>
     <div class="form-group">
       <label for="address_neighborhood1" class="control-label">
         Neighborhood
@@ -50,6 +46,25 @@
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-lg-8 col-md-8">
+    <div class="form-group">
+      <label for="address_line2" class="control-label">Line #2</label>
+      <input type="text" name="address[line2]" id="address_line2" class="form-control">
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4">
+    <div class="form-group">
+      <label for="address_ownership" class="control-label">Ownership</label>
+      <select name="address[ownership]" id="address_ownership" class="form-control">
+        <option value="permanent" selected>Permanent</option>
+        <option value="renting">Renting</option>
+      </select>
+    </div>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-lg-4 col-md-4">
     <div class="form-group">
@@ -86,6 +101,7 @@
     </div>
   </div>
 </div>
+
 <div class="row">
   <div class="col-lg-4 col-md-4">
     <div class="form-group required">

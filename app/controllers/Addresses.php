@@ -19,6 +19,6 @@ class Addresses extends CI_Controller {
 
   public function edit()
   {
-    return view('addresses/edit');
+    return view('addresses/edit', []);
   }
 }

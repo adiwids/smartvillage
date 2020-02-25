@@ -71,13 +71,13 @@
           Residentials
         </a>
       </li>
-      <li {{ is_page(uri_string(), 'archives') ? "class=active" : "" }}>
+      <li {{ is_page(uri_string(), 'archives') ? "class=active" : "" }} style="display: none;">
         <a href="/archives">
           <i class="glyphicon glyphicon-folder-open"></i>
           Archives
         </a>
       </li>
-      <li {{ is_page(uri_string(), 'transactions') ? "class=active" : "" }}>
+      <li {{ is_page(uri_string(), 'transactions') ? "class=active" : "" }} style="display: none;">
         <a href="/transactions">
           <i class="glyphicon glyphicon-piggy-bank"></i>
           Cash Transactions
