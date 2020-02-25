@@ -81,4 +81,5 @@ $(document).ready(function() {
     $(this).click(remoteAnchorOnClickListener);
   });
   initDateTimePicker('.birthdate.date-picker', { format: 'L', maxDate: moment() });
+  initDateTimePicker('.year-picker', { format: 'YYYY', maxDate: moment() });
 });

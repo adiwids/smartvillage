@@ -9,7 +9,7 @@
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-calendar"></i>
       </span>
-      <input type="text" name="education[registered_at]" id="education_registered_at" class="form-control">
+      <input type="text" name="education[registered_at]" id="education_registered_at" class="form-control year-picker">
     </div>
   </div>
   <div class="form-group col-lg-3 col-md-3 required">
@@ -18,7 +18,7 @@
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-calendar"></i>
       </span>
-      <input type="text" name="education_graduated_at]" id="education_graduated_at" class="form-control">
+      <input type="text" name="education_graduated_at]" id="education_graduated_at" class="form-control year-picker">
     </div>
   </div>
 </div>
