@@ -21,7 +21,9 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th style="width: 56px;">In-use</th>
+                  <th style="width: 56px;" class="text-center">
+                    <i class="glyphicon glyphicon-ok" title="Current address"></i>
+                  </th>
                   <th>Address</th>
                   <th>Phone</th>
                 </tr>
