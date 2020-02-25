@@ -15,4 +15,10 @@ use Dotenv\Dotenv;
  $hook['pre_system'] = function() {
    $dotenv = Dotenv::create(ROOTPATH);
    $dotenv->load();
+
+   $default_timezone = getenv('DEFAULT_TIMEZONE');
+   if( trim(strlen($default_timezone)) == 0 ) {
+     $default_timezone = 'Asia/Jakarta';
+   }
+   date_default_timezone_set($default_timezone);
  };

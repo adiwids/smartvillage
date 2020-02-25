@@ -22,7 +22,7 @@
     <div class="tab-content">
       <div class="tab-pane active" role="tabpanel" id="village_information">
         <div class="panel panel-default panel-folder">
-          <form action="#">
+          <form action="/store_setting" method="post">
             <div class="panel-body">
               <div class="row">
                 <div class="form-group col-lg-6 required">

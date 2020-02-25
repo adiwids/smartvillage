@@ -81,3 +81,4 @@ $route['users'] = 'users/index';
 $route['users/(:num)/edit'] = 'users/edit';
 
 $route['settings'] = 'settings/index';
+$route['store_setting']['post'] = 'settings/store';
