@@ -18,6 +18,7 @@ function buildApplicationStyle() {
   return gulp.src([
                   'app/cache/assets/**/*.css',
                   'node_modules/bootstrap/dist/css/bootstrap.css',
+                  'node_modules/chart.js/dist/Chart.css',
                   'node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css'
               ])
              .pipe(concat('app.css'))
@@ -32,6 +33,7 @@ function compileScript() {
                   'node_modules/webcamjs/webcam.js',
                   'node_modules/moment/moment.js',
                   'node_modules/moment/locale/*.js',
+                  'node_modules/chart.js/dist/Chart.js',
                   'app/assets/javascripts/**/*.js',
                   'app/assets/javascripts/app.js'
                 ])
