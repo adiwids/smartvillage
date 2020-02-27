@@ -20,15 +20,23 @@ class Migration_Create_settings_table extends CI_Migration {
       "key" => [
         "type" => "VARCHAR",
         "constraint" => "191",
-        "unique" => TRUE,
         "null" => FALSE
       ],
       "value" => [
         "type" => "VARCHAR",
         "constraint" => "191",
-        "null" => TRUE,
-        "default" => "N/A"
+        "null" => TRUE
       ],
+      "created_at" => [
+        "type" => "VARCHAR",
+        "constraint" => "191",
+        "null" => TRUE
+      ],
+      "updated_at" => [
+        "type" => "VARCHAR",
+        "constraint" => "191",
+        "null" => TRUE
+      ]
     ];
     $this->dbforge->add_field($fields);
     $this->dbforge->add_key('id', TRUE);

@@ -80,5 +80,5 @@ $route['families/(:num)/edit'] = 'families/edit';
 $route['users'] = 'users/index';
 $route['users/(:num)/edit'] = 'users/edit';
 
-$route['settings'] = 'settings/index';
-$route['store_setting']['post'] = 'settings/store';
+$route['settings']['get'] = 'controller_settings/index';
+$route['settings']['post'] = 'controller_settings/store';

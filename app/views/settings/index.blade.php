@@ -19,127 +19,126 @@
         </a>
       </li>
     </ul>
-    <div class="tab-content">
-      <div class="tab-pane active" role="tabpanel" id="village_information">
-        <div class="panel panel-default panel-folder">
-          <form action="/store_setting" method="post">
-            <div class="panel-body">
-              <div class="row">
-                <div class="form-group col-lg-6 required">
-                  <label for="village_name" class="control-label">Name</label>
-                  <input type="text" name="village[name]" id="village_name" class="form-control">
-                </div>
-                <div class="form-group col-lg-3 col-lg-offset-1">
-                  <label for="village_neighborhood1" class="control-label">
-                    Neighborhood
-                    <small class="hint">RT/RW</small>
-                  </label>
-                  <div class="row">
-                    <div class="col-lg-5 col-md-5">
-                      <input type="text" class="form-control text-right" name="village[neighborhood][]" id="village_neighborhood1">
+    <form action="/settings" method="post">
+      <div class="tab-content">
+        <div class="tab-pane active" role="tabpanel" id="village_information">
+          <div class="panel panel-default panel-folder">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="form-group col-lg-6 required">
+                    <label for="village_name" class="control-label">Name</label>
+                    <input type="text" name="village[name]" id="village_name" class="form-control" value="{{ $village->name }}">
+                  </div>
+                  <div class="form-group col-lg-3 col-lg-offset-1">
+                    <label for="village_neighborhood1" class="control-label">
+                      Neighborhood
+                      <small class="hint">RT/RW</small>
+                    </label>
+                    <div class="row">
+                      <div class="col-lg-5 col-md-5">
+                        <input type="text" class="form-control text-right" name="village[neighborhood][0]" id="village_neighborhood1" value="{{ $village->neighborhood_rt }}">
+                      </div>
+                      <div class="col-lg-1 col-md-1"><span>/</span></div>
+                      <div class="col-lg-5 col-md-5">
+                        <input type="text" class="form-control text-right" name="village[neighborhood][1]" value="{{ $village->neighborhood_rw }}">
+                      </div>
                     </div>
-                    <div class="col-lg-1 col-md-1"><span>/</span></div>
-                    <div class="col-lg-5 col-md-5">
-                      <input type="text" class="form-control text-right" name="village[neighborhood][]">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-lg-4">
+                    <label for="village_subdistrict" class="control-label">
+                      Sub-district
+                      <small class="hint">Kecamatan</small>
+                    </label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </span>
+                      <input type="text" class="form-control" name="village[subdistrict]" id="village_subdistrict" value="{{ $village->subdistrict }}">
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-4 required">
+                    <label for="village_district" class="control-label">
+                      District
+                      <small class="hint">Kota or Kabupaten</small>
+                    </label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </span>
+                      <input type="text" class="form-control" name="village[district]" id="village_district" value="{{ $village->district }}">
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-4 required">
+                    <label for="village_province" class="control-label">Province</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </span>
+                      <input type="text" class="form-control" name="village[province]" id="village_province" value="{{ $village->province }}">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-lg-2 required">
+                    <label for="village_zipcode" class="control-label">Zipcode</label>
+                    <input type="text" class="form-control text-right" name="village[zipcode]" id="village_zipcode" value="{{ $village->zipcode }}">
+                  </div>
+                  <div class="form-group col-lg-5">
+                    <label for="village_country" class="control-label">Country</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-flag"></i>
+                      </span>
+                      <input type="text" class="form-control" name="village[country]" id="village_country" value="{{ $village->country }}">
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="form-group col-lg-4">
-                  <label for="village_subdistrict" class="control-label">
-                    Sub-district
-                    <small class="hint">Kecamatan</small>
-                  </label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </span>
-                    <input type="text" class="form-control" name="village[subdistrict]" id="village_subdistrict">
-                  </div>
-                </div>
-                <div class="form-group col-lg-4 required">
-                  <label for="village_district" class="control-label">
-                    District
-                    <small class="hint">Kota or Kabupaten</small>
-                  </label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </span>
-                    <input type="text" class="form-control" name="village[district]" id="village_district">
-                  </div>
-                </div>
-                <div class="form-group col-lg-4 required">
-                  <label for="village_province" class="control-label">Province</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </span>
-                    <input type="text" class="form-control" name="village[province]" id="village_province">
-                  </div>
-                </div>
+              <div class="panel-footer">
+                @include('shared/form_save_or_cancel_buttons')
               </div>
-              <div class="row">
-                <div class="form-group col-lg-2 required">
-                  <label for="village_zipcode" class="control-label">Zipcode</label>
-                  <input type="text" class="form-control text-right" name="village[zipcode]" id="village_zipcode">
-                </div>
-                <div class="form-group col-lg-5">
-                  <label for="village_country" class="control-label">Country</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-flag"></i>
-                    </span>
-                    <input type="text" class="form-control" name="village[country]" id="village_country">
+            </form>
+          </div>
+        </div>
+        <div class="tab-pane" role="tabpanel" id="administrative_office">
+          <div class="panel panel-default panel-folder">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <label for="village_chairman_id" class="control-label">Chairman</label>
+                    <input type="hidden" name="village[chairman_id]" id="village_chairman_id" value="{{ $village->chairman_id }}">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-user"></i>
+                      </span>
+                      <input type="text" class="form-control" name="village[chairman_name]" id="village_chairman_name" value="{{ $village->chairman_name }}">
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                        <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-4">
+                    <label for="village_chairman_phone_number" class="control-label">Phone</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-phone"></i>
+                      </span>
+                      <input type="text" class="form-control" name="village[chairman_phone_number]" id="village_chairman_phone_number" value="{{ $village->chairman_phone_number }}">
+                    </div>
                   </div>
                 </div>
+                <!-- address for administrative office here -->
               </div>
-            </div>
-            <div class="panel-footer">
-              @include('shared/form_save_or_cancel_buttons')
-            </div>
-          </form>
+              <div class="panel-footer">
+                @include('shared/form_save_or_cancel_buttons')
+              </div>
+          </div>
         </div>
       </div>
-      <div class="tab-pane" role="tabpanel" id="administrative_office">
-        <div class="panel panel-default panel-folder">
-          <form action="#">
-            <div class="panel-body">
-              <div class="row">
-                <div class="form-group col-lg-6">
-                  <label for="village[chairman_id]" class="control-label">Chairman</label>
-                  <input type="hidden" id="village_chairman_name">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-user"></i>
-                    </span>
-                    <input type="text" class="form-control" name="village[chairman_name]" id="village_chairman_name">
-                    <div class="input-group-btn">
-                      <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
-                      <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group col-lg-4">
-                  <label for="village_chairman_phone_number" class="control-label">Phone</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-phone"></i>
-                    </span>
-                    <input type="text" class="form-control" name="village[chairman_phone_number]" id="village_chairman_phone_number">
-                  </div>
-                </div>
-              </div>
-              @include('families/address_tab', ['address_options_available' => false])
-            </div>
-            <div class="panel-footer">
-              @include('shared/form_save_or_cancel_buttons')
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
 @endsection
