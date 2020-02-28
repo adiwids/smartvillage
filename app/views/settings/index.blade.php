@@ -130,7 +130,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- address for administrative office here -->
+                @include('families/address_tab', ["address_options_available" => FALSE])
               </div>
               <div class="panel-footer">
                 @include('shared/form_save_or_cancel_buttons')

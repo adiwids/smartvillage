@@ -64,7 +64,7 @@
         </li>
       </ul>
     </div>
-    <ul class="nav navbar-nav sidebar" style="display: none;">
+    <ul class="nav navbar-nav sidebar">
       <li {{ is_page(uri_string(), ['residentials', 'residents', 'families']) ? "class=active" : "" }}>
         <a href="/residentials">
           <i class="glyphicon glyphicon-user"></i>

@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Model_village_information extends CI_MODEL {
+class Model_village_information {
     const ROOT_KEY = "village";
     const NAME_KEY = "name";
     const NEIGHBOR_RT_KEY = "neighborhood_rt";

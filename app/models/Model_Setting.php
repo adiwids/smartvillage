@@ -2,8 +2,10 @@
 /**
  *   id: BIGINT(20) UNSIGNED AUTO INCREMENT PRIMARY KEY
  *   parent_id: BIGINT(20) UNSIGNED
- *   key: VARCHAR(191) UNIQUE NOT NULL
+ *   key: VARCHAR(191) NOT NULL
  *   value: VARCHAR(191) DEFAULT 'N/A'
+ *   created_at: VARCHAR(191)
+ *   updated_at: VARCHAR(191)
  */
 
 use Carbon\Carbon;
@@ -25,7 +27,7 @@ class Model_setting extends CI_Model {
     {
         self::$instance = new Model_setting();
         self::$db = &get_instance()->db;
-        
+
         $query = self::$db->select(sprintf("%s.*", self::TABLE_NAME))
                           ->where([sprintf("%s.key", self::TABLE_NAME) => $key])->limit(1);
         if( !is_null($parent_key) ) {
