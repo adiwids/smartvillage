@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Families extends CI_Controller {
+class Controller_families extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
@@ -14,7 +14,14 @@ class Families extends CI_Controller {
 
   public function index()
   {
-    return view('families/index', []);
+    $village = new Model_village_information();
+    foreach(Model_setting::load_village_information(Model_village_information::ROOT_KEY) as $row) {
+      $attr = $row->key;
+      $village->$attr = $row->value;
+    }
+
+    $new_address = Model_address::from_village($village);
+    return view('families/index', ["new_address" => $new_address]);
   }
 
   public function show()

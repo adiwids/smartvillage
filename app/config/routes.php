@@ -69,13 +69,13 @@ $route['educations/(:num)/edit'] = 'educations/edit';
 $route['residents/(:num)/jobs'] = 'jobs/index';
 $route['jobs/(:num)/edit'] = 'jobs/edit';
 
-$route['residents/(:num)/family'] = 'families/show';
+$route['residents/(:num)/family'] = 'controller_families/show';
 
 $route['residents/(:num)/addresses'] = 'controller_addresses/index';
 $route['addresses/(:num)/edit'] = 'controller_addresses/edit';
 
-$route['residentials/families'] = 'families/index';
-$route['families/(:num)/edit'] = 'families/edit';
+$route['residentials/families'] = 'controller_families/index';
+$route['families/(:num)/edit'] = 'controller_families/edit';
 
 $route['users'] = 'users/index';
 $route['users/(:num)/edit'] = 'users/edit';

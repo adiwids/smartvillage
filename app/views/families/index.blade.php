@@ -77,7 +77,7 @@
           <form action="#">
             <div class="panel-body">
               @include('families/fields')
-              @include('families/address_tab', ['address_options_available' => false])
+              @include('families/address_tab', ['address_options_available' => false, 'new_address' => $new_address])
             </div>
             <div class="panel-footer">
               @include('shared/form_save_or_cancel_buttons')
