@@ -79,7 +79,7 @@
       <div class="panel panel-default panel-folder">
         <form action="#">
           <div class="panel-body">
-            @include('addresses/fields')
+            @include('addresses/fields', ['address' => $new_address])
           </div>
           <div class="panel-footer">
             @include('shared/form_save_or_cancel_buttons')

@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_Create_settings_table extends CI_Migration {
+class Migration_create_regionals_table extends CI_Migration {
   public function up()
   {
     $fields = [
@@ -10,27 +10,31 @@ class Migration_Create_settings_table extends CI_Migration {
         "unsigned" => TRUE,
         "auto_increment" => TRUE
       ],
-      "address_id" => [
-        "type" => "BIGINT",
-        "constraint" => "20",
-        "unsigned" => TRUE,
-        "null" => TRUE,
-        "default" => "0"
-      ],
-      "village_name" => [
-        "type" => "VARCHAR",
-        "constraint" => "191",
-        "null" => FALSE
-      ],
-      "chairman_name" => [
-        "type" => "VARCHAR",
-        "constraint" => "191",
-        "null" => FALSE
-      ],
-      "chairman_phone_number" => [
+      "subdistrict" => [
         "type" => "VARCHAR",
         "constraint" => "191",
         "null" => TRUE
+      ],
+      "district" => [
+        "type" => "VARCHAR",
+        "constraint" => "191",
+        "null" => FALSE
+      ],
+      "province" => [
+        "type" => "VARCHAR",
+        "constraint" => "191",
+        "null" => FALSE
+      ],
+      "zipcode" => [
+        "type" => "VARCHAR",
+        "constraint" => "6",
+        "null" => TRUE
+      ],
+      "country" => [
+        "type" => "VARCHAR",
+        "constraint" => "191",
+        "null" => TRUE,
+        "default" => "Indonesia"
       ],
       "created_at" => [
         "type" => "VARCHAR",
@@ -45,11 +49,11 @@ class Migration_Create_settings_table extends CI_Migration {
     ];
     $this->dbforge->add_field($fields);
     $this->dbforge->add_key('id', TRUE);
-    $this->dbforge->create_table('administrative_offices');
+    $this->dbforge->create_table('regionals');
   }
 
   public function down()
   {
-    $this->dbforge->drop_table('administrative_offices');
+    $this->dbforge->drop_table('regionals');
   }
 }

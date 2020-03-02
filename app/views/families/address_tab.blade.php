@@ -45,7 +45,7 @@
         <div class="panel panel-default panel-folder">
           <div class="panel-body">
             <form action="#">
-              @include('addresses/fields')
+              @include('addresses/fields', ['address' => $new_address])
             </form>
           </div>
         </div>

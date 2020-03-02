@@ -19,7 +19,7 @@
       <form action="#">
         <div class="panel-body frame">
           @include('families/fields')
-          @include('families/address_tab', ['address_options_available' => true])
+          @include('families/address_tab', ['address_options_available' => true, 'new_address' => $new_address])
           <div class="row">
             <div class="col-lg-12">
               <ul class="nav nav-tabs" role="tablist">

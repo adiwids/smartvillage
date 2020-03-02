@@ -13,48 +13,62 @@ class Controller_settings extends CI_Controller {
     $this->load->library('migration');
     $this->load->model('model_village_information');
     $this->load->model('model_setting');
+    $this->load->model('model_officer');
+    $this->load->model('model_address');
+    $this->load->model('model_regional');
   }
 
   public function index()
   {
-    $this->runMigration();
+    $this->run_migration();
     $village = new Model_village_information();
+    $officer = new Model_officer();
 
     foreach(Model_setting::load_village_information(Model_village_information::ROOT_KEY) as $row) {
       $attr = $row->key;
       $village->$attr = $row->value;
     }
 
-    return view('settings/index', ["village" => $village]);
+    $new_address = Model_address::from_village($village);
+    $new_address->addressable_type = "model_officer";
+
+    return view('settings/index', ["village" => $village, "officer" => $officer, "new_address" => $new_address]);
   }
 
   public function store()
   {
     $attrs = Model_village_information::adjust_attributes($this->input->post());
     Model_setting::insert_village_information_settings($attrs);
+    Model_regional::insert_or_update([
+      "subdistrict" => $attrs['subdistrict'],
+      "district" => $attrs['district'],
+      "province" => $attrs['province'],
+      "country" => $attrs['country'],
+      "zipcode" => $attrs['zipcode']
+    ]);
 
     header('Location: /settings');
   }
 
-  private function runMigration()
+  private function run_migration()
   {
     if( !$this->migration->current() ) {
-      $this->logMigrationFailure($this->migration->error_string());
+      $this->log_migration_failure($this->migration->error_string());
     } else {
-      $this->logMigrationInfo();
+      $this->log_migration_info();
     }
 
     return TRUE;
   }
 
-  private function logMigrationInfo()
+  private function log_migration_info()
   {
     log_message('info', sprintf("Database migrated successfully to version %d at %s",
                                 $this->migration->current(),
                                 Carbon::now()->toDateTimeString()));
   }
 
-  private function logMigrationFailure($error)
+  private function log_migration_failure($error)
   {
     log_message('error', sprintf("Migration failed: %s", $error));
   }

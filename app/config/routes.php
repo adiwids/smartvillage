@@ -71,8 +71,8 @@ $route['jobs/(:num)/edit'] = 'jobs/edit';
 
 $route['residents/(:num)/family'] = 'families/show';
 
-$route['residents/(:num)/addresses'] = 'addresses/index';
-$route['addresses/(:num)/edit'] = 'addresses/edit';
+$route['residents/(:num)/addresses'] = 'controller_addresses/index';
+$route['addresses/(:num)/edit'] = 'controller_addresses/edit';
 
 $route['residentials/families'] = 'families/index';
 $route['families/(:num)/edit'] = 'families/edit';
@@ -82,3 +82,5 @@ $route['users/(:num)/edit'] = 'users/edit';
 
 $route['settings']['get'] = 'controller_settings/index';
 $route['settings']['post'] = 'controller_settings/store';
+
+$route['officers']['post'] = 'controller_officers/store';

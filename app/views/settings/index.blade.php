@@ -15,13 +15,13 @@
       <li role="presentation">
         <a href="#administrative_office" data-toggle="tab">
           <i class="glyphicon glyphicon-briefcase"></i>
-          Administrative Office
+          Officer
         </a>
       </li>
     </ul>
-    <form action="/settings" method="post">
-      <div class="tab-content">
-        <div class="tab-pane active" role="tabpanel" id="village_information">
+    <div class="tab-content">
+      <div class="tab-pane active" role="tabpanel" id="village_information">
+        <form action="/settings" method="post">
           <div class="panel panel-default panel-folder">
               <div class="panel-body">
                 <div class="row">
@@ -29,7 +29,7 @@
                     <label for="village_name" class="control-label">Name</label>
                     <input type="text" name="village[name]" id="village_name" class="form-control" value="{{ $village->name }}">
                   </div>
-                  <div class="form-group col-lg-3 col-lg-offset-1">
+                  <div class="form-group col-lg-4">
                     <label for="village_neighborhood1" class="control-label">
                       Neighborhood
                       <small class="hint">RT/RW</small>
@@ -99,46 +99,59 @@
               <div class="panel-footer">
                 @include('shared/form_save_or_cancel_buttons')
               </div>
-            </form>
           </div>
-        </div>
-        <div class="tab-pane" role="tabpanel" id="administrative_office">
+        </form>
+      </div>
+      <div class="tab-pane" role="tabpanel" id="administrative_office">
+        <form action="/officers" method="post">
           <div class="panel panel-default panel-folder">
-              <div class="panel-body">
-                <div class="row">
-                  <div class="form-group col-lg-6">
-                    <label for="village_chairman_id" class="control-label">Chairman</label>
-                    <input type="hidden" name="village[chairman_id]" id="village_chairman_id" value="{{ $village->chairman_id }}">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-user"></i>
-                      </span>
-                      <input type="text" class="form-control" name="village[chairman_name]" id="village_chairman_name" value="{{ $village->chairman_name }}">
-                      <div class="input-group-btn">
-                        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
-                        <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i></button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group col-lg-4">
-                    <label for="village_chairman_phone_number" class="control-label">Phone</label>
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-phone"></i>
-                      </span>
-                      <input type="text" class="form-control" name="village[chairman_phone_number]" id="village_chairman_phone_number" value="{{ $village->chairman_phone_number }}">
+            <div class="panel-body">
+              <div class="row">
+                <div class="form-group col-lg-6">
+                  <label for="officer_chairman_id" class="control-label">Chairman</label>
+                  <input type="hidden" name="officer[chairman_id]" id="officer_chairman_id" value="{{ $officer->resident_id }}">
+                  <input type="hidden" name="officer[is_chairmain]" value="1">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="glyphicon glyphicon-user"></i>
+                    </span>
+                    <input type="text" class="form-control" name="officer[full_name]" id="officer_full_name" value="{{ $officer->full_name }}">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                      <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i></button>
                     </div>
                   </div>
                 </div>
-                @include('families/address_tab', ["address_options_available" => FALSE])
               </div>
-              <div class="panel-footer">
-                @include('shared/form_save_or_cancel_buttons')
+              <div class="row">
+                <div class="form-group col-lg-5">
+                  <label for="officer_phone" class="control-label">Mobile</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="glyphicon glyphicon-phone"></i>
+                    </span>
+                    <input type="text" class="form-control" name="officer[phone]" id="officer_phone" value="{{ $officer->phone }}">
+                  </div>
+                </div>
+                <div class="form-group col-lg-5">
+                  <label for="officer_email" class="control-label">Email</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="glyphicon glyphicon-envelope"></i>
+                    </span>
+                    <input type="text" class="form-control" name="officer[email]" id="officer_email" value="{{ $officer->email }}">
+                  </div>
+                </div>
               </div>
+              @include('families/address_tab', ["address_options_available" => FALSE, "address" => $new_address])
+            </div>
+            <div class="panel-footer">
+              @include('shared/form_save_or_cancel_buttons')
+            </div>
           </div>
-        </div>
+        </form>
       </div>
-    </form>
+    </div>
   </div>
 </div>
 @endsection

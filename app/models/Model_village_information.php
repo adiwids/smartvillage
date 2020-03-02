@@ -10,14 +10,10 @@ class Model_village_information {
     const PROVINCE_KEY = "province";
     const ZIPCODE_KEY  = "zipcode";
     const COUNTRY_KEY = "country";
-    const CHAIRMAN_ID_KEY = "chairman_id";
-    const CHAIRMAN_NAME_KEY = "chairman_name";
-    const CHAIRMAN_PHONE_NUMBER = "chairman_phone_number";
 
     var $root;
     var $name, $neighborhood_rt, $neighborhood_rw, $subdistrict, $district,
         $province, $zipcode, $country;
-    var $chairman_id, $chairman_name, $chairman_phone_number;
 
     function __construct($attributes = array(), $adjustable = TRUE)
     {
@@ -45,10 +41,7 @@ class Model_village_information {
             self::DISTRICT_KEY => !is_null($root) && array_key_exists(self::DISTRICT_KEY, $root) ? $root[self::DISTRICT_KEY] : NULL,
             self::PROVINCE_KEY => !is_null($root) && array_key_exists(self::PROVINCE_KEY, $root) ? $root[self::PROVINCE_KEY] : NULL,
             self::ZIPCODE_KEY => !is_null($root) && array_key_exists(self::ZIPCODE_KEY, $root) ? $root[self::ZIPCODE_KEY] : NULL,
-            self::COUNTRY_KEY => !is_null($root) && array_key_exists(self::COUNTRY_KEY, $root) ? $root[self::COUNTRY_KEY] : NULL,
-            self::CHAIRMAN_ID_KEY => !is_null($root) && array_key_exists(self::CHAIRMAN_ID_KEY, $root) ? $root[self::CHAIRMAN_ID_KEY] : NULL,
-            self::CHAIRMAN_NAME_KEY => !is_null($root) && array_key_exists(self::CHAIRMAN_NAME_KEY, $root) ? $root[self::CHAIRMAN_NAME_KEY] : NULL,
-            self::CHAIRMAN_PHONE_NUMBER => !is_null($root) && array_key_exists(self::CHAIRMAN_PHONE_NUMBER, $root) ? $root[self::CHAIRMAN_PHONE_NUMBER] : NULL
+            self::COUNTRY_KEY => !is_null($root) && array_key_exists(self::COUNTRY_KEY, $root) ? $root[self::COUNTRY_KEY] : NULL
         ];
     }
 }
