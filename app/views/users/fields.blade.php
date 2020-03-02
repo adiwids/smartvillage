@@ -41,9 +41,11 @@
 </div>
 <div class="col-lg-4 col-md-4">
   <div class="form-group required">
-    <label for="user_roles" class="control-label">Roles</label>
-    <select name="user[roles]" id="user_roles" class="form-control" multiple>
-      <option value="superadmin">Super Admin</option>
+    <label for="user_role" class="control-label">Role</label>
+    <select name="user[role]" id="user_role" class="form-control">
+      <option value="chairman">Chairman</option>
+      <option value="secretary">Secretary</option>
+      <option value="exchequer">Exchequer</option>
       <option value="staff">Staff</option>
     </select>
   </div>
