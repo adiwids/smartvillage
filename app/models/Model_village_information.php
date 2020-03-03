@@ -35,8 +35,8 @@ class Model_village_information {
         return [
             "root" => self::ROOT_KEY,
             self::NAME_KEY => !is_null($root) && array_key_exists(self::NAME_KEY, $root) ? $root[self::NAME_KEY] : NULL,
-            self::NEIGHBOR_RT_KEY => !is_null($root) && array_key_exists('neighborhood', $root) ? $root['neighborhood'][0] : NULL,
-            self::NEIGHBOR_RW_KEY => !is_null($root) && array_key_exists('neighborhood', $root) ? $root['neighborhood'][1] : NULL,
+            self::NEIGHBOR_RT_KEY => !is_null($root) && array_key_exists('neighborhood_rt', $root) ? $root['neighborhood_rt'] : NULL,
+            self::NEIGHBOR_RW_KEY => !is_null($root) && array_key_exists('neighborhood_rw', $root) ? $root['neighborhood_rw'] : NULL,
             self::SUBDISTRICT_KEY => !is_null($root) && array_key_exists(self::SUBDISTRICT_KEY, $root) ? $root[self::SUBDISTRICT_KEY] : NULL,
             self::DISTRICT_KEY => !is_null($root) && array_key_exists(self::DISTRICT_KEY, $root) ? $root[self::DISTRICT_KEY] : NULL,
             self::PROVINCE_KEY => !is_null($root) && array_key_exists(self::PROVINCE_KEY, $root) ? $root[self::PROVINCE_KEY] : NULL,

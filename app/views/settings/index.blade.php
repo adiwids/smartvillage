@@ -6,21 +6,21 @@
 <div class="row">
   <div class="col-lg-12">
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active">
+      <li role="presentation"{{ $tab == "village_information" ? " class=active" : "" }}>
         <a href="#village_information" data-toggle="tab">
           <i class="glyphicon glyphicon-home"></i>
           Village Information
         </a>
       </li>
-      <li role="presentation">
-        <a href="#administrative_office" data-toggle="tab">
+      <li role="presentation"{{ $tab == "officer" ? " class=active" : "" }}>
+        <a href="#officer" data-toggle="tab">
           <i class="glyphicon glyphicon-briefcase"></i>
           Officer
         </a>
       </li>
     </ul>
     <div class="tab-content">
-      <div class="tab-pane active" role="tabpanel" id="village_information">
+      <div class="tab-pane{{ $tab == 'village_information' ? ' active' : '' }}" role="tabpanel" id="village_information">
         <form action="/settings" method="post">
           <div class="panel panel-default panel-folder">
               <div class="panel-body">
@@ -30,17 +30,17 @@
                     <input type="text" name="village[name]" id="village_name" class="form-control" value="{{ $village->name }}">
                   </div>
                   <div class="form-group col-lg-4">
-                    <label for="village_neighborhood1" class="control-label">
+                    <label for="village_neighborhood_rt" class="control-label">
                       Neighborhood
                       <small class="hint">RT/RW</small>
                     </label>
                     <div class="row">
                       <div class="col-lg-5 col-md-5">
-                        <input type="text" class="form-control text-right" name="village[neighborhood][0]" id="village_neighborhood1" value="{{ $village->neighborhood_rt }}">
+                        <input type="text" class="form-control text-right" name="village[neighborhood_rt]" id="village_neighborhood_rt" value="{{ $village->neighborhood_rt }}">
                       </div>
                       <div class="col-lg-1 col-md-1"><span>/</span></div>
                       <div class="col-lg-5 col-md-5">
-                        <input type="text" class="form-control text-right" name="village[neighborhood][1]" value="{{ $village->neighborhood_rw }}">
+                        <input type="text" class="form-control text-right" name="village[neighborhood_rw]" value="{{ $village->neighborhood_rw }}">
                       </div>
                     </div>
                   </div>
@@ -102,15 +102,15 @@
           </div>
         </form>
       </div>
-      <div class="tab-pane" role="tabpanel" id="administrative_office">
+      <div class="tab-pane{{ $tab == 'officer' ? ' active' : '' }}" role="tabpanel" id="officer">
         <form action="/officers" method="post">
+          <input type="hidden" name="back_to" value="/settings?tab=officer">
           <div class="panel panel-default panel-folder">
             <div class="panel-body">
               <div class="row">
                 <div class="form-group col-lg-6">
-                  <label for="officer_chairman_id" class="control-label">Chairman</label>
-                  <input type="hidden" name="officer[chairman_id]" id="officer_chairman_id" value="{{ $officer->resident_id }}">
-                  <input type="hidden" name="officer[is_chairmain]" value="1">
+                  <label for="officer_resident_id" class="control-label">Chairman</label>
+                  <input type="hidden" name="officer[resident_id]" id="officer_resident_id" value="{{ $officer->resident_id }}">
                   <div class="input-group">
                     <span class="input-group-addon">
                       <i class="glyphicon glyphicon-user"></i>

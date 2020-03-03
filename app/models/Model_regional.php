@@ -54,6 +54,7 @@ class Model_regional extends CI_Model {
           "created_at" => $row['created_at'],
           "updated_at" => $row['updated_at']
         ]);
+        self::$instance->update($attributes);
       }
     } else {
       self::$instance = new Model_regional($attributes);
@@ -64,37 +65,37 @@ class Model_regional extends CI_Model {
   }
 
   function save()
-    {
-        $attrs = [
-          "subdistrict" => strtolower(trim($this->subdistrict)),
-          "district" => strtolower(trim($this->district)),
-          "province" => strtolower(trim($this->province)),
-          "zipcode" => strtolower(trim($this->zipcode)),
-          "country" => strtolower(trim($this->country))
-        ];
+  {
+      $attrs = [
+        "subdistrict" => strtolower(trim($this->subdistrict)),
+        "district" => strtolower(trim($this->district)),
+        "province" => strtolower(trim($this->province)),
+        "zipcode" => strtolower(trim($this->zipcode)),
+        "country" => strtolower(trim($this->country))
+      ];
 
-        if($this->is_persisted()) {
-            $this->update($attrs);
-        } else {
-            $creation_datetime = Carbon::now()->toDateTimeString();
-            $attrs['created_at'] = $creation_datetime;
-            $attrs['updated_at'] = $creation_datetime;
+      if($this->is_persisted()) {
+          $this->update($attrs);
+      } else {
+          $creation_datetime = Carbon::now()->toDateTimeString();
+          $attrs['created_at'] = $creation_datetime;
+          $attrs['updated_at'] = $creation_datetime;
 
-            $this->db->insert(self::TABLE_NAME, $attrs);
-        }
-    }
+          $this->db->insert(self::TABLE_NAME, $attrs);
+      }
+  }
 
-    function is_persisted()
-    {
-        return !is_null($this->id) ? is_numeric(intval($this->id)) : FALSE;
-    }
+  function is_persisted()
+  {
+      return !is_null($this->id) ? is_numeric(intval($this->id)) : FALSE;
+  }
 
-    function update($new_attributes = array())
-    {
-        $new_attributes['updated_at'] = Carbon::now()->toDateTimeString();
+  function update($new_attributes = array())
+  {
+      $new_attributes['updated_at'] = Carbon::now()->toDateTimeString();
 
-        $this->db->where(sprintf("%s.id", self::TABLE_NAME), intval($this->id))
-                 ->set($new_attributes)
-                 ->update(self::TABLE_NAME);
-    }
+      $this->db->where(sprintf("%s.id", self::TABLE_NAME), intval($this->id))
+                ->set($new_attributes)
+                ->update(self::TABLE_NAME);
+  }
 }

@@ -22,7 +22,7 @@ class Controller_settings extends CI_Controller {
   {
     $this->run_migration();
     $village = new Model_village_information();
-    $officer = new Model_officer();
+    $officer = Model_officer::find_chairman();
 
     foreach(Model_setting::load_village_information(Model_village_information::ROOT_KEY) as $row) {
       $attr = $row->key;
@@ -32,7 +32,18 @@ class Controller_settings extends CI_Controller {
     $new_address = Model_address::from_village($village);
     $new_address->addressable_type = "model_officer";
 
-    return view('settings/index', ["village" => $village, "officer" => $officer, "new_address" => $new_address]);
+    $current_tab = $this->input->get('tab');
+    if(is_null($current_tab) || strlen($current_tab) == 0) {
+      $current_tab = "village_information";
+    }
+    $data = [
+      "tab" => $current_tab,
+      "village" => $village,
+      "officer" => $officer,
+      "new_address" => $new_address
+    ];
+
+    return view('settings/index', $data);
   }
 
   public function store()
