@@ -19,6 +19,14 @@ class Home_controller extends Admin_controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct()
+	{
+		parent::__construct();
+		if(!$this->is_current_village_set()) {
+			header("Location: /settings");
+		}
+	}
+
 
 	public function index()
 	{

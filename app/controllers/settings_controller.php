@@ -10,6 +10,7 @@ class Settings_controller extends Admin_controller {
     $this->load->library('migration');
     $this->load->model('address_model');
     $this->load->model('officer_model');
+    $this->load->model('regional_model');
   }
 
   public function index()

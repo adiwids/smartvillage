@@ -25,9 +25,13 @@ if(!function_exists('is_page')) {
   }
 }
 
-if(!function_exists('page_title')) {
-  function page_title($url_string)
+if(!function_exists('navbar_title')) {
+  function navbar_title($village)
   {
-    return $url_string;
+    if(!is_null($village)) {
+      return sprintf("%s RT %s RW %s", $village->name, $village->neighborhood_rt, $village->neighborhood_rw);
+    } else {
+      return 'Smart Village';
+    }
   }
 }

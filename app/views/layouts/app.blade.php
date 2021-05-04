@@ -3,7 +3,7 @@
 <html lang="id">
 <head>
 	<meta charset="utf-8">
-	<title>Smart Village | {{ $village->name }}</title>
+	<title>{{ navbar_title(NULL) }}</title>
   <link rel="stylesheet" href="{{ asset_path('app.css') }}">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a href="/" class="navbar-brand">
-          {{ $village->name }}<small>Admin Panel</small>
+          {{ navbar_title($village) }}<small>Admin Panel</small>
         </a>
       </div>
       <ul class="nav navbar-nav">

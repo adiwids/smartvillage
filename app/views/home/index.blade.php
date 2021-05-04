@@ -8,7 +8,7 @@
 			<p>If you would like to edit this page you'll find it located at:</p>
 			<code>app/views/home/index.blade.php</code>
 			<p>The corresponding controller for this page is found at:</p>
-			<code>app/controllers/Home_controller.php</code>
+			<code>app/controllers/home_controller.php</code>
 			<p>If you are exploring <span class="text-danger">CodeIgniter</span> for the very first time, you should start by reading the <a href="https://www.codeigniter.com/user_guide/" target="_blank">User Guide</a>.</p>
 			<i class="glyphicon glyphicon-thumbs-up"></i>
 		</div>
