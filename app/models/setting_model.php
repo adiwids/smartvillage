@@ -10,7 +10,7 @@
 
 use Carbon\Carbon;
 
-class Model_setting extends CI_Model {
+class Setting_model extends CI_Model {
     const TABLE_NAME = "settings";
 
     static $instance;
@@ -25,7 +25,7 @@ class Model_setting extends CI_Model {
 
     static function find_by_key($key, $parent_key = NULL)
     {
-        self::$instance = new Model_setting();
+        self::$instance = new Setting_model();
         self::$db = &get_instance()->db;
 
         $query = self::$db->select(sprintf("%s.*", self::TABLE_NAME))
@@ -53,11 +53,11 @@ class Model_setting extends CI_Model {
 
     static function insert_village_information_settings($village_information_attributes)
     {
-        self::$instance = new Model_setting();
+        self::$instance = new Setting_model();
         $parent_setting = NULL;
         $parent_setting = self::find_by_key($village_information_attributes['root'], NULL);
         if(is_null($parent_setting)) {
-            $parent_setting = new Model_setting();
+            $parent_setting = new Setting_model();
             $parent_setting->key = $village_information_attributes['root'];
             $parent_setting->value = $village_information_attributes['root'];
             $parent_setting->save();

@@ -1,56 +1,43 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 use Carbon\Carbon;
+require_once 'admin_controller.php';
 
-class Controller_settings extends CI_Controller {
+class Settings_controller extends Admin_controller {
   public function __construct()
   {
     parent::__construct();
-    $this->load->helper('url');
-    $this->load->helper('controller_macro');
-    $this->load->helper('page');
-
     $this->load->library('migration');
-    $this->load->model('model_village_information');
-    $this->load->model('model_setting');
-    $this->load->model('model_officer');
-    $this->load->model('model_address');
-    $this->load->model('model_regional');
+    $this->load->model('address_model');
+    $this->load->model('officer_model');
   }
 
   public function index()
   {
     $this->run_migration();
-    $village = new Model_village_information();
-    $officer = Model_officer::find_chairman();
 
-    foreach(Model_setting::load_village_information(Model_village_information::ROOT_KEY) as $row) {
-      $attr = $row->key;
-      $village->$attr = $row->value;
-    }
-
-    $new_address = Model_address::from_village($village);
-    $new_address->addressable_type = "model_officer";
+    $officer = Officer_model::find_chairman();
+    $new_address = Address_model::from_village($this->village);
+    $new_address->addressable_type = "officer_model";
 
     $current_tab = $this->input->get('tab');
     if(is_null($current_tab) || strlen($current_tab) == 0) {
       $current_tab = "village_information";
     }
-    $data = [
+    $this->data = array_merge($this->data, [
       "tab" => $current_tab,
-      "village" => $village,
       "officer" => $officer,
       "new_address" => $new_address
-    ];
+    ]);
 
-    return view('settings/index', $data);
+    return view('settings/index', $this->data);
   }
 
   public function store()
   {
-    $attrs = Model_village_information::adjust_attributes($this->input->post());
-    Model_setting::insert_village_information_settings($attrs);
-    Model_regional::insert_or_update([
+    $attrs = Village_information_model::adjust_attributes($this->input->post());
+    Setting_model::insert_village_information_settings($attrs);
+    Regional_model::insert_or_update([
       "subdistrict" => $attrs['subdistrict'],
       "district" => $attrs['district'],
       "province" => $attrs['province'],

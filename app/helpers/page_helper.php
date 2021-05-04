@@ -24,3 +24,10 @@ if(!function_exists('is_page')) {
     }
   }
 }
+
+if(!function_exists('page_title')) {
+  function page_title($url_string)
+  {
+    return $url_string;
+  }
+}

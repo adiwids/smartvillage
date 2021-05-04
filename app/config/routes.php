@@ -49,38 +49,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'home';
+$route['default_controller'] = 'home_controller';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['about'] = 'home/about';
-$route['help'] = 'home/help';
+$route['about'] = 'home_controller/about';
+$route['help'] = 'home_controller/help';
 
-$route['residentials'] = 'residents/dashboard';
+$route['residentials'] = 'residents_controller/dashboard';
 
-$route['residentials/residents'] = 'residents/index';
-$route['residents/(:num)/edit'] = 'residents/edit';
+$route['residentials/residents'] = 'residents_controller/index';
+$route['residents/(:num)/edit'] = 'residents_controller/edit';
 
-$route['residents/(:num)/photos'] = 'photos/index';
-$route['residents/(:num)/photos/create'] = 'photos/create';
+$route['residents/(:num)/photos'] = 'photos_controller/index';
+$route['residents/(:num)/photos/create'] = 'photos_controller/create';
 
-$route['residents/(:num)/education'] = 'educations/index';
-$route['educations/(:num)/edit'] = 'educations/edit';
+$route['residents/(:num)/education'] = 'educations_controller/index';
+$route['educations/(:num)/edit'] = 'educations_controller/edit';
 
-$route['residents/(:num)/jobs'] = 'jobs/index';
-$route['jobs/(:num)/edit'] = 'jobs/edit';
+$route['residents/(:num)/jobs'] = 'jobs_controller/index';
+$route['jobs/(:num)/edit'] = 'jobs_controller/edit';
 
-$route['residents/(:num)/family'] = 'controller_families/show';
+$route['residents/(:num)/family'] = 'families_controller/show';
 
-$route['residents/(:num)/addresses'] = 'controller_addresses/index';
-$route['addresses/(:num)/edit'] = 'controller_addresses/edit';
+$route['residents/(:num)/addresses'] = 'addresses_controller/index';
+$route['addresses/(:num)/edit'] = 'addresses_controller/edit';
 
-$route['residentials/families'] = 'controller_families/index';
-$route['families/(:num)/edit'] = 'controller_families/edit';
+$route['residentials/families'] = 'families_controller/index';
+$route['families/(:num)/edit'] = 'families_controller/edit';
 
-$route['users'] = 'users/index';
-$route['users/(:num)/edit'] = 'users/edit';
+$route['users'] = 'users_controller/index';
+$route['users/(:num)/edit'] = 'users_controller/edit';
 
-$route['settings']['get'] = 'controller_settings/index';
-$route['settings']['post'] = 'controller_settings/store';
+$route['settings']['get'] = 'settings_controller/index';
+$route['settings']['post'] = 'settings_controller/store';
 
-$route['officers']['post'] = 'controller_officers/store';
+$route['officers']['post'] = 'officers_controller/store';

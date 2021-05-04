@@ -12,7 +12,7 @@
 
 use Carbon\Carbon;
 
-class Model_regional extends CI_Model {
+class Regional_model extends CI_Model {
   const TABLE_NAME = "regionals";
 
   static $instance;
@@ -44,7 +44,7 @@ class Model_regional extends CI_Model {
       $row = $query->row();
 
       if(isset($row)) {
-        self::$instance = new Model_regional([
+        self::$instance = new Regional_model([
           "id" => $row['id'],
           "subdistrict" => $row['subdistrict'],
           "district" => $row['district'],
@@ -57,7 +57,7 @@ class Model_regional extends CI_Model {
         self::$instance->update($attributes);
       }
     } else {
-      self::$instance = new Model_regional($attributes);
+      self::$instance = new Regional_model($attributes);
       self::$instance->save();
     }
 

@@ -12,3 +12,4 @@
 /app/logs/*.log
 /app/tmp
 !/app/tmp/.keep
+/debug.log

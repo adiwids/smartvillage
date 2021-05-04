@@ -3,14 +3,16 @@
 <html lang="id">
 <head>
 	<meta charset="utf-8">
-	<title>Smart Village</title>
+	<title>Smart Village | {{ $village->name }}</title>
   <link rel="stylesheet" href="{{ asset_path('app.css') }}">
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a href="/" class="navbar-brand">Smart Village</a>
+        <a href="/" class="navbar-brand">
+          {{ $village->name }}<small>Admin Panel</small>
+        </a>
       </div>
       <ul class="nav navbar-nav">
         <li class="dropdown{{ is_page(uri_string(), 'settings') ? ' active' : '' }}">

@@ -1,23 +1,24 @@
 {
-	"description": "Smart Village",
-	"name": "adiwids/smartvillage",
-	"type": "project",
-	"homepage": "http://localhost.com",
-	"license": "MIT",
-	"support": {
-		"source": "http://localhost.com",
-		"wiki": "http://localhost.com"
-	},
-	"require": {
-		"php": ">=5.2.4",
-		"jenssegers/blade": "^1.1",
-		"nesbot/carbon": "^1.36",
-		"vlucas/phpdotenv": "^3.3"
-	},
-	"suggest": {
-		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
-	},
-	"require-dev": {
-		"mikey179/vfsStream": "1.1.*"
-	}
+    "description": "Smart Village",
+    "name": "adiwids/smartvillage",
+    "type": "project",
+    "homepage": "http://localhost.com",
+    "license": "MIT",
+    "support": {
+        "source": "http://localhost.com",
+        "wiki": "http://localhost.com"
+    },
+    "require": {
+        "php": ">=5.2.4",
+        "jenssegers/blade": "^1.1",
+        "nesbot/carbon": "^2.0.0",
+        "vlucas/phpdotenv": "^3.3"
+    },
+    "suggest": {
+        "paragonie/random_compat": "Provides better randomness in PHP 5.x"
+    },
+    "require-dev": {
+        "mikey179/vfsstream": "1.1.*",
+        "composer/composer": "^2.0"
+    }
 }

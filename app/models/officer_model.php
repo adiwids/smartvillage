@@ -12,7 +12,7 @@
 
 use Carbon\Carbon;
 
-class Model_officer extends CI_Model {
+class Officer_model extends CI_Model {
   const TABLE_NAME = "officers";
 
   static $instance;
@@ -34,7 +34,7 @@ class Model_officer extends CI_Model {
 
   static function find_chairman()
   {
-    self::$instance = new Model_officer();
+    self::$instance = new Officer_model();
     $query = self::$db->where(sprintf("%s.is_chairman", self::TABLE_NAME), 1)
                       ->order_by(sprintf("%s.created_at ASC", self::TABLE_NAME))
                       ->limit(1);

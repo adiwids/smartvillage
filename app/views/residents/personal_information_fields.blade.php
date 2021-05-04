@@ -1,7 +1,7 @@
 <div class="form-group required">
-  <label for="resident_number" class="control-label col-lg-3 col-md-3 col-sm-3">Number</label>
-  <div class="col-lg-6 col-md-6 col-sm-6">
-    <input type="text" name="resident[number]" id="resident_number" class="form-control">
+  <label for="resident_number" class="control-label col-lg-2 col-md-2 col-sm-3">Number</label>
+  <div class="col-lg-2 col-md-2 col-sm-6">
+    <input type="text" name="resident[number]" id="resident_number" class="form-control" maxlength="16">
   </div>
   <div class="checkbox col-lg-3 col-md-3 col-sm-3">
     <label>
@@ -10,14 +10,14 @@
   </div>
 </div>
 <div class="form-group required">
-  <label for="resident_name" class="control-label col-lg-3 col-md-3 col-sm-3">Name</label>
-  <div class="col-lg-9 col-md-9 col-sm-9">
+  <label for="resident_name" class="control-label col-lg-2 col-md-2 col-sm-3">Name</label>
+  <div class="col-lg-5 col-md-5 col-sm-9">
     <input type="text" name="resident[name]" id="resident_name" class="form-control">
   </div>
 </div>
 <div class="form-group">
-  <label for="resident_gender" class="control-label col-lg-3 col-md-3 col-sm-3">Gender</label>
-  <div class="col-lg-3 col-md-3 col-sm-3">
+  <label for="resident_gender" class="control-label col-lg-2 col-md-2 col-sm-3">Gender</label>
+  <div class="col-lg-1 col-md-1 col-sm-3">
     <div class="radio">
       <label for="resident_gender_male">
         <input type="radio" name="resident[gender]" id="resident_gender_male" checked> Male
@@ -44,8 +44,8 @@
   </div>
 </div>
 <div class="form-group">
-  <label for="resident_place_of_birth" class="control-label col-lg-3 col-md-3 col-sm-3">Place & Date of Birth</label>
-  <div class="col-lg-5 col-md-5 col-sm-5">
+  <label for="resident_place_of_birth" class="control-label col-lg-2 col-md-2 col-sm-3">Place & Date of Birth</label>
+  <div class="col-lg-3 col-md-3 col-sm-5">
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-search"></i>
@@ -53,7 +53,7 @@
       <input type="text" name="resident[place_of_birth]" id="resident_place_of_birth" class="form-control">
     </div>
   </div>
-  <div class="col-lg-4 col-md-4 col-sm-4">
+  <div class="col-lg-2 col-md-2 col-sm-4">
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-calendar"></i>
@@ -63,14 +63,14 @@
   </div>
 </div>
 <div class="form-group">
-  <label for="resident_nationality" class="control-label col-lg-3 col-md-3 col-sm-3">Nationality</label>
-  <div class="col-lg-3 col-md-3 col-sm-3">
+  <label for="resident_nationality" class="control-label col-lg-2 col-md-2 col-sm-3">Nationality</label>
+  <div class="col-lg-2 col-md-2 col-sm-3">
     <select name="resident[nationality]" id="resident_nationality" class="form-control">
       <option value="domestic" selected>Domestic</option>
       <option value="foreign">Foreign</option>
     </select>
   </div>
-  <div class="col-lg-4 col-md-4 col-sm-4">
+  <div class="col-lg-3 col-md-3 col-sm-4">
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-flag"></i>
@@ -80,8 +80,8 @@
   </div>
 </div>
 <div class="form-group">
-  <label for="resident_religion" class="control-label col-lg-3 col-md-3 col-sm-3">Religion</label>
-  <div class="col-lg-3 col-md-3 col-sm-3">
+  <label for="resident_religion" class="control-label col-lg-2 col-md-2 col-sm-3">Religion</label>
+  <div class="col-lg-2 col-md-2 col-sm-3">
     <select name="resident[religion]" id="resident_religion" class="form-control">
       <option value="islam">Islam</option>
       <option value="christian">Catholic</option>
@@ -92,7 +92,7 @@
     </select>
   </div>
   <label for="resident_marriage_status" class="control-label col-lg-2 col-md-2 col-sm-2">Marriage Status</label>
-  <div class="col-lg-3 col-md-3 col-sm-3">
+  <div class="col-lg-2 col-md-2 col-sm-3">
     <select name="resident[mariage_status]" id="resident_marriage_status" class="form-control">
       <option value="b" selected>Single</option>
       <option value="s">Married</option>
@@ -101,7 +101,7 @@
   </div>
 </div>
 <div class="form-group">
-  <label for="resident_disability" class="control-label col-lg-3 col-md-3 col-sm-3">Disability</label>
+  <label for="resident_disability" class="control-label col-lg-2 col-md-2 col-sm-3">Disability</label>
   <div class="col-lg-9 col-md-9 col-sm-9">
     <div class="checkbox">
       <label>
@@ -124,12 +124,10 @@
       </label>
     </div>
     <div class="checkbox">
-      <label class="col-lg-12 col-md-12 col-sm-12">
+      <label class="col-lg-7 col-md-7 col-sm-6">
         <input type="checkbox" name="resident[disability][]" value="5"> Other
-      </label>
-      <div class="form-group col-lg-6">
         <input type="text" name="resident[disability][]" class="form-control">
-      </div>
+      </label>
     </div>
   </div>
 </div>

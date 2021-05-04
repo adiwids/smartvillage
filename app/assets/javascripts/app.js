@@ -82,4 +82,5 @@ $(document).ready(function() {
   });
   initDateTimePicker('.birthdate.date-picker', { format: 'L', maxDate: moment() });
   initDateTimePicker('.year-picker', { format: 'YYYY', maxDate: moment() });
+  renderFamiliesMembersChart();
 });

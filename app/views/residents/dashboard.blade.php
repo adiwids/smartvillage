@@ -7,7 +7,12 @@
 @section('content')
 <div class="row">
   <div class="col-lg-9 col-md-8">
-
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <canvas id="families_members_chart"></canvas>
+      </div>
+      <div class="col-lg-6 col-md-6"></div>
+    </div>
   </div>
   <div class="col-lg-3 col-md-4">
     <div class="panel panel-default">

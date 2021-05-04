@@ -13,7 +13,7 @@
 
 use Carbon\Carbon;
 
-class Model_address extends CI_Model {
+class Address_model extends CI_Model {
     const TABLE_NAME = "addresses";
 
     static $instance;
@@ -36,7 +36,7 @@ class Model_address extends CI_Model {
 
     static function from_village($village_information)
     {
-        return new Model_address([
+        return new Address_model([
             "is_origin" => 1,
             "is_current" => 1,
             "village_name" => $village_information->name,

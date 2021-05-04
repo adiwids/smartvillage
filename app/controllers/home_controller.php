@@ -1,6 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+require_once 'admin_controller.php';
+
+class Home_controller extends Admin_controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,26 +20,18 @@ class Home extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	public function __construct()
-	{
-		parent::__construct();
-		$this->load->helper('url');
-		$this->load->helper('controller_macro');
-		$this->load->helper('page');
-	}
-
 	public function index()
 	{
-		return view('home/index', []);
+		return view('home/index', $this->data);
 	}
 
 	public function about()
 	{
-		return view('home/about', []);
+		return view('home/about', $this->data);
 	}
 
 	public function help()
 	{
-		return view('home/help', []);
+		return view('home/help', $this->data);
 	}
 }

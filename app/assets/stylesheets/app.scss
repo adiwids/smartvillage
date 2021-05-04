@@ -1,5 +1,4 @@
 @import 'variables.scss';
-@import 'welcome.scss';
 
 div[role="main-content"] {
   margin-top: $bs-navbar-height;
@@ -101,5 +100,17 @@ fieldset {
   &.row {
     padding-left: 15px;
     margin-right: 15px;
+  }
+}
+
+.navbar {
+  &.navbar-fixed-top {
+    .navbar-header {
+      .navbar-brand {
+        small {
+          margin-left: 15px;
+        }
+      }
+    }
   }
 }

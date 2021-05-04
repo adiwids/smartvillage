@@ -1,10 +1,12 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Controller_officers extends CI_Controller {
+require_once 'admin_controller.php';
+
+class Officers_controller extends Admin_controller {
   public function __construct()
   {
     parent::__construct();
-    $this->load->model('model_officer');
+    $this->load->model('officer_model');
   }
 
   public function store()
@@ -14,9 +16,9 @@ class Controller_officers extends CI_Controller {
       $redirect_back_to = "/settings";
     }
 
-    $officer = Model_officer::find_chairman();
+    $officer = Officer_model::find_chairman();
     if(!$officer->is_persisted()) {
-      $officer = new Model_officer($this->input->post('officer'));
+      $officer = new Officer_model($this->input->post('officer'));
       $officer->is_chairman = 1;
       $officer->save();
     } else {
